@@ -5,6 +5,6 @@
 * source activate jiraEnv
 
 ### Structure sketch
-* accounts
+* accounts (Need to create App or is it a folder)
 * bugs (similar to posts)
 * comments

@@ -5,6 +5,7 @@
 
 ### Guide for reference
 * https://docs.djangoproject.com/en/3.0/intro/tutorial01/
+* https://github.com/nuthanc/simplesocial
 
 ### Structure sketch
 * accounts

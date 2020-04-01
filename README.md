@@ -21,3 +21,15 @@
 * python manage.py startapp issues
 * python manage.py startapp comments
 * Adding the apps in settings.py
+
+### Issues setup
+##### Basic
+* Type: Story, Bug, Task
+* Status: Open, In Progress, Closed
+* Details
+##### Advanced
+* Reporter: Dependency with Accounts
+* Assignee: Dependency with Accounts
+* Links to other issues
+* Attachments
+

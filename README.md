@@ -1,6 +1,9 @@
 # Jira Clone
 
-# Guide for reference
+### Project link Github
+* https://github.com/nuthanc/jiraClone/projects/1
+
+### Guide for reference
 * https://docs.djangoproject.com/en/3.0/intro/tutorial01/
 
 ### Structure sketch

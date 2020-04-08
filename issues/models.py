@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.urls import reverse
 
 # Create your models here.
 
 
-class Issues(models.Model):
-
+class Issue(models.Model):
+    
     class TypeOfIssue(models.TextChoices):
         STORY = 'ST', _('Story')
         BUG = 'BU', _('Bug')
@@ -16,7 +17,7 @@ class Issues(models.Model):
         IN_PROGRESS = 'IN', _('In Progress')
         CLOSED = 'CL', _('Closed')
 
-    type_of_issue = models.CharField(
+    type = models.CharField(
         max_length=2,
         choices=TypeOfIssue.choices,
         default=TypeOfIssue.BUG,
@@ -24,7 +25,11 @@ class Issues(models.Model):
 
     status = models.CharField(
         max_length=2,
-        choices=TypeOfIssue.choices,
-        default=TypeOfIssue.BUG,
+        choices=Status.choices,
+        default=Status.OPEN,
     )
 
+    details = models.TextField(blank=False)
+
+    def get_absolute_url(self):
+        return reverse('home')

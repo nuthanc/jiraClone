@@ -33,4 +33,7 @@
 * Assignee: Dependency with Accounts
 * Links to other issues
 * Attachments
-
+#### Model, Template, View and Url setup of Issues
+* issues/templates/issues/issue_form.html
+* project urls.py and issues urls.py
+* issues models.py and views.py

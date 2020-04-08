@@ -1,0 +1,2645 @@
+{
+  "data": {
+    "issue": {
+      "id": "384482",
+      "viewScreenId": 10132,
+      "fields": [
+        {
+          "key": "issuetype",
+          "title": "Issue Type",
+          "editable": true,
+          "required": true,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/issuetype/10002",
+              "id": "10002",
+              "description": "A task that needs to be done.",
+              "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=medium&avatarId=10318&avatarType=issuetype",
+              "name": "Task",
+              "subtask": false,
+              "avatarId": 10318
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/issuetype/10001",
+              "id": "10001",
+              "description": "A user story. Created by JIRA Software - do not edit or delete.",
+              "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype",
+              "name": "Story",
+              "subtask": false,
+              "avatarId": 10315
+            }
+          ],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/issuetype/10002",
+            "id": "10002",
+            "description": "A task that needs to be done.",
+            "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=medium&avatarId=10318&avatarType=issuetype",
+            "name": "Task",
+            "subtask": false,
+            "avatarId": 10318
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "issuetype",
+            "type": "issuetype",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10070",
+          "title": "External Task ID",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": "",
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+            "system": null,
+            "type": "string",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10191",
+          "title": "Dev Owner",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": "https://contrail-jws.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_10191&fieldConfigId=10359&projectId=10027&showAvatar=true&query=",
+          "allowedValues": [],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/user?accountId=5d319491adb0f50c8c2bb675",
+            "accountId": "5d319491adb0f50c8c2bb675",
+            "emailAddress": "nuthanc@juniper.net",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=48&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=24&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=16&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=32&s=32"
+            },
+            "displayName": "Nuthan Chandra",
+            "active": true,
+            "timeZone": "America/Los_Angeles",
+            "accountType": "atlassian"
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:userpicker",
+            "system": null,
+            "type": "user",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "fixVersions",
+          "title": "Fix versions",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10289",
+              "id": "10289",
+              "name": "trunk",
+              "archived": false,
+              "released": false,
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10734",
+              "id": "10734",
+              "name": "FutureRelease",
+              "archived": false,
+              "released": false,
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10124",
+              "id": "10124",
+              "description": "R5.1",
+              "name": "R5.1",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-05-13",
+              "userReleaseDate": "12/May/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10127",
+              "id": "10127",
+              "name": "R5.0.3",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-03-13",
+              "userReleaseDate": "12/Mar/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10157",
+              "id": "10157",
+              "name": "R4.1.3",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-04-25",
+              "userReleaseDate": "24/Apr/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10158",
+              "id": "10158",
+              "name": "R4.1.2",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2018-12-07",
+              "userReleaseDate": "06/Dec/18",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10159",
+              "id": "10159",
+              "name": "R5.0",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2018-04-30",
+              "userReleaseDate": "29/Apr/18",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10160",
+              "id": "10160",
+              "name": "R5.0.1",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-01-30",
+              "userReleaseDate": "29/Jan/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10161",
+              "id": "10161",
+              "name": "R5.0.2",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2018-11-26",
+              "userReleaseDate": "25/Nov/18",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10212",
+              "id": "10212",
+              "name": "R3.2.13",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2018-11-02",
+              "userReleaseDate": "01/Nov/18",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10223",
+              "id": "10223",
+              "name": "R3.0",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2016-04-05",
+              "userReleaseDate": "04/Apr/16",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10224",
+              "id": "10224",
+              "name": "R3.2",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2016-12-20",
+              "userReleaseDate": "19/Dec/16",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10248",
+              "id": "10248",
+              "name": "R3.2.14",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-02-14",
+              "userReleaseDate": "13/Feb/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10287",
+              "id": "10287",
+              "name": "r3.2.11.0",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-02-11",
+              "userReleaseDate": "10/Feb/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10288",
+              "id": "10288",
+              "name": "r4.1.2.0",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-09-11",
+              "userReleaseDate": "10/Sep/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10290",
+              "id": "10290",
+              "name": "R4.0",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2017-06-06",
+              "userReleaseDate": "05/Jun/17",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10292",
+              "id": "10292",
+              "name": "R4.1",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2017-12-20",
+              "userReleaseDate": "19/Dec/17",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10293",
+              "id": "10293",
+              "name": "r3.1",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2016-08-14",
+              "userReleaseDate": "13/Aug/16",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10294",
+              "id": "10294",
+              "name": "r3.1.5.0",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-09-11",
+              "userReleaseDate": "10/Sep/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10295",
+              "id": "10295",
+              "name": "r2.21.4",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2016-11-01",
+              "userReleaseDate": "31/Oct/16",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10297",
+              "id": "10297",
+              "description": "Contrail July 2019 Release",
+              "name": "R1906",
+              "archived": false,
+              "released": true,
+              "startDate": "2019-05-01",
+              "releaseDate": "2019-07-16",
+              "userStartDate": "30/Apr/19",
+              "userReleaseDate": "15/Jul/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10345",
+              "id": "10345",
+              "name": "R3.2.15.0",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-07-22",
+              "userReleaseDate": "21/Jul/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10346",
+              "id": "10346",
+              "description": "4.1.4 Maintenance Release",
+              "name": "R4.1.4",
+              "archived": false,
+              "released": true,
+              "startDate": "2019-10-01",
+              "releaseDate": "2019-12-16",
+              "userStartDate": "30/Sep/19",
+              "userReleaseDate": "15/Dec/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10483",
+              "id": "10483",
+              "description": "Contrail September 2019 Release, RM: Sachin",
+              "name": "R1909",
+              "archived": false,
+              "released": true,
+              "startDate": "2019-08-16",
+              "releaseDate": "2019-09-16",
+              "userStartDate": "15/Aug/19",
+              "userReleaseDate": "15/Sep/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10348",
+              "id": "10348",
+              "description": "Contrail August 2019 Release - RM: Atul Moghe",
+              "name": "R1908",
+              "archived": false,
+              "released": true,
+              "startDate": "2019-05-31",
+              "releaseDate": "2019-08-22",
+              "userStartDate": "30/May/19",
+              "userReleaseDate": "21/Aug/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10485",
+              "id": "10485",
+              "description": "Contrail October 2019 Release, RM: Sivakumar",
+              "name": "R1910",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-10-17",
+              "userReleaseDate": "16/Oct/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10486",
+              "id": "10486",
+              "description": "Contrail November 2019 Release, RM: Raghu",
+              "name": "R1911",
+              "archived": false,
+              "released": true,
+              "startDate": "2019-09-17",
+              "releaseDate": "2019-11-20",
+              "userStartDate": "16/Sep/19",
+              "userReleaseDate": "19/Nov/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10487",
+              "id": "10487",
+              "description": "Contrail December 2019 Release; RM S.Moore, J.Pianigiani",
+              "name": "R1912",
+              "archived": false,
+              "released": true,
+              "startDate": "2019-10-16",
+              "releaseDate": "2019-12-16",
+              "userStartDate": "15/Oct/19",
+              "userReleaseDate": "15/Dec/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10578",
+              "id": "10578",
+              "name": "R3.1.5",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-09-13",
+              "userReleaseDate": "12/Sep/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10590",
+              "id": "10590",
+              "name": "R4.1.5",
+              "archived": false,
+              "released": false,
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10606",
+              "id": "10606",
+              "description": "Maintenance Release - AT&T Bug Fixes and New Kernel Support",
+              "name": "R3.2.16",
+              "archived": false,
+              "released": false,
+              "startDate": "2019-10-22",
+              "releaseDate": "2020-05-06",
+              "overdue": false,
+              "userStartDate": "21/Oct/19",
+              "userReleaseDate": "05/May/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10610",
+              "id": "10610",
+              "description": "R2002 - RM",
+              "name": "R2002",
+              "archived": true,
+              "released": false,
+              "startDate": "2019-12-16",
+              "releaseDate": "2020-02-17",
+              "overdue": false,
+              "userStartDate": "15/Dec/19",
+              "userReleaseDate": "16/Feb/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10617",
+              "id": "10617",
+              "description": "3.1.6 Maintenance Release",
+              "name": "R3.1.6",
+              "archived": false,
+              "released": true,
+              "startDate": "2019-10-22",
+              "releaseDate": "2019-12-18",
+              "userStartDate": "21/Oct/19",
+              "userReleaseDate": "17/Dec/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10618",
+              "id": "10618",
+              "description": "3.2.13.1 hot fix for AT&T",
+              "name": "3.2.13.1",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-11-06",
+              "userReleaseDate": "05/Nov/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10619",
+              "id": "10619",
+              "description": "Hot fix release for AT&T",
+              "name": "3.2.15.1",
+              "archived": false,
+              "released": true,
+              "startDate": "2019-10-25",
+              "releaseDate": "2019-11-07",
+              "userStartDate": "24/Oct/19",
+              "userReleaseDate": "06/Nov/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10631",
+              "id": "10631",
+              "description": "debug image for Orange CEM-9268",
+              "name": "R3.2.3.2",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2019-11-19",
+              "userReleaseDate": "18/Nov/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10632",
+              "id": "10632",
+              "description": "Hot fix for STC CEM-10533",
+              "name": "R4.1.2.1",
+              "archived": true,
+              "released": false,
+              "releaseDate": "2019-11-27",
+              "overdue": false,
+              "userReleaseDate": "26/Nov/19",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10634",
+              "id": "10634",
+              "name": "R3.2.1",
+              "archived": false,
+              "released": false,
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10688",
+              "id": "10688",
+              "description": "New intermediate Long Term Support Release L1",
+              "name": "R1912.L1",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2020-03-25",
+              "userReleaseDate": "24/Mar/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10691",
+              "id": "10691",
+              "description": "New intermediate Long Term Support Release L4",
+              "name": "R1912.L4",
+              "archived": false,
+              "released": false,
+              "releaseDate": "2020-12-15",
+              "overdue": false,
+              "userReleaseDate": "14/Dec/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10690",
+              "id": "10690",
+              "description": "New intermediate Long Term Support Release L3",
+              "name": "R1912.L3",
+              "archived": false,
+              "released": false,
+              "releaseDate": "2020-09-15",
+              "overdue": false,
+              "userReleaseDate": "14/Sep/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10689",
+              "id": "10689",
+              "description": "New intermediate Long Term Support Release L2",
+              "name": "R1912.L2",
+              "archived": false,
+              "released": false,
+              "releaseDate": "2020-06-15",
+              "overdue": false,
+              "userReleaseDate": "14/Jun/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10703",
+              "id": "10703",
+              "name": "R2011",
+              "archived": false,
+              "released": false,
+              "releaseDate": "2020-11-16",
+              "overdue": false,
+              "userReleaseDate": "15/Nov/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10698",
+              "id": "10698",
+              "description": "Q3 Feature Release",
+              "name": "R2008",
+              "archived": false,
+              "released": false,
+              "releaseDate": "2020-08-17",
+              "overdue": false,
+              "userReleaseDate": "16/Aug/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10629",
+              "id": "10629",
+              "description": "R2005",
+              "name": "R2005",
+              "archived": false,
+              "released": false,
+              "startDate": "2020-02-17",
+              "releaseDate": "2020-05-18",
+              "overdue": false,
+              "userStartDate": "16/Feb/20",
+              "userReleaseDate": "17/May/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10710",
+              "id": "10710",
+              "description": "Payload: R4.1.4 plus two bug fixes and support for RHEL7.5",
+              "name": "R4.1.4.1",
+              "archived": false,
+              "released": true,
+              "releaseDate": "2020-03-17",
+              "userReleaseDate": "16/Mar/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10729",
+              "id": "10729",
+              "description": "MedOne Fixes - Reinstate UI Performance Improvements",
+              "name": "R2003.1",
+              "archived": false,
+              "released": false,
+              "startDate": "2020-03-26",
+              "releaseDate": "2020-04-21",
+              "overdue": false,
+              "userStartDate": "25/Mar/20",
+              "userReleaseDate": "20/Apr/20",
+              "projectId": 10027
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/version/10611",
+              "id": "10611",
+              "description": "R2003",
+              "name": "R2003",
+              "archived": false,
+              "released": true,
+              "startDate": "2020-01-16",
+              "releaseDate": "2020-03-31",
+              "userStartDate": "15/Jan/20",
+              "userReleaseDate": "30/Mar/20",
+              "projectId": 10027
+            }
+          ],
+          "content": [],
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "fixVersions",
+            "type": "array",
+            "renderer": "frother-control-renderer"
+          }
+        },
+        {
+          "key": "customfield_10232",
+          "title": "Shared with (group)",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:grouppicker",
+            "system": null,
+            "type": "group",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "resolution",
+          "title": "Resolution",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "resolution",
+            "type": "resolution",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10227",
+          "title": "TestCategory",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10289",
+              "value": "Deployment",
+              "id": "10289"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10290",
+              "value": "Regression",
+              "id": "10290"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10291",
+              "value": "Solution",
+              "id": "10291"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10292",
+              "value": "Upgrade",
+              "id": "10292"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10293",
+              "value": "Scale&Perf",
+              "id": "10293"
+            }
+          ],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+            "system": null,
+            "type": "option",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "watches",
+          "title": "Watchers",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/issue/CEM-14376/watchers",
+            "watchCount": 0,
+            "isWatching": false
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "watches",
+            "type": "watches",
+            "renderer": null
+          }
+        },
+        {
+          "key": "created",
+          "title": "Created",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": "2020-04-06T00:59:56.073-0700",
+          "renderedContent": "Today 12:59 AM",
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "created",
+            "type": "datetime",
+            "renderer": null
+          }
+        },
+        {
+          "key": "customfield_10063",
+          "title": "JTAC-Case-Id",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": "",
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+            "system": null,
+            "type": "string",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "priority",
+          "title": "Priority",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/1",
+              "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10521&avatarType=issuetype",
+              "name": "P0",
+              "id": "1"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/10011",
+              "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10522&avatarType=issuetype",
+              "name": "P1",
+              "id": "10011"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/3",
+              "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10523&avatarType=issuetype",
+              "name": "P2",
+              "id": "3"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/4",
+              "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10524&avatarType=issuetype",
+              "name": "P3",
+              "id": "4"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/10020",
+              "iconUrl": "https://contrail-jws.atlassian.net/images/icons/priority_major.gif",
+              "name": "Highest",
+              "id": "10020"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/10021",
+              "iconUrl": "https://contrail-jws.atlassian.net/images/icons/priority_major.gif",
+              "name": "Medium",
+              "id": "10021"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/10022",
+              "iconUrl": "https://contrail-jws.atlassian.net/images/icons/priority_major.gif",
+              "name": "High",
+              "id": "10022"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/10023",
+              "iconUrl": "https://contrail-jws.atlassian.net/images/icons/priority_major.gif",
+              "name": "Lowest",
+              "id": "10023"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/10024",
+              "iconUrl": "https://contrail-jws.atlassian.net/images/icons/priority_major.gif",
+              "name": "Low",
+              "id": "10024"
+            }
+          ],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/10011",
+            "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10522&avatarType=issuetype",
+            "name": "P1",
+            "id": "10011"
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "priority",
+            "type": "priority",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10024",
+          "title": "Story Points",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": 5.0,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:storypoint",
+            "system": null,
+            "type": "number",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "labels",
+          "title": "Labels",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": "https://contrail-jws.atlassian.net/rest/api/1.0/labels/384482/suggest?query=",
+          "allowedValues": [],
+          "content": [],
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "labels",
+            "type": "array",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10214",
+          "title": "Product Usage",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10231",
+              "value": "Fabric",
+              "id": "10231"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10232",
+              "value": "Computes",
+              "id": "10232"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10233",
+              "value": "MultiCloud",
+              "id": "10233"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10266",
+              "value": "UX-improvement",
+              "id": "10266"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10267",
+              "value": "Partner-Integration",
+              "id": "10267"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10273",
+              "value": "Usability",
+              "id": "10273"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10274",
+              "value": "TechDebt",
+              "id": "10274"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10298",
+              "value": "Collector Services",
+              "id": "10298"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10299",
+              "value": "Alarming Services",
+              "id": "10299"
+            }
+          ],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+            "system": null,
+            "type": "option",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "issuelinks",
+          "title": "Linked Issues",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": "https://contrail-jws.atlassian.net/rest/api/2/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=CEM-14376&query=",
+          "allowedValues": [],
+          "content": [
+            {
+              "id": "162500",
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/issueLink/162500",
+              "type": {
+                "id": "10000",
+                "name": "Blocks",
+                "inward": "is blocked by",
+                "outward": "blocks",
+                "self": "https://contrail-jws.atlassian.net/rest/api/2/issueLinkType/10000"
+              },
+              "outwardIssue": {
+                "id": "384298",
+                "key": "CEM-14337",
+                "self": "https://contrail-jws.atlassian.net/rest/api/2/issue/384298",
+                "fields": {
+                  "summary": "Qualify Contrail CNI with Kubernetes 1.14",
+                  "status": {
+                    "self": "https://contrail-jws.atlassian.net/rest/api/2/status/3",
+                    "description": "This issue is being actively worked on at the moment by the assignee.",
+                    "iconUrl": "https://contrail-jws.atlassian.net/images/icons/statuses/inprogress.png",
+                    "name": "In Progress",
+                    "id": "3",
+                    "statusCategory": {
+                      "self": "https://contrail-jws.atlassian.net/rest/api/2/statuscategory/4",
+                      "id": 4,
+                      "key": "indeterminate",
+                      "colorName": "yellow",
+                      "name": "In Progress"
+                    }
+                  },
+                  "priority": {
+                    "self": "https://contrail-jws.atlassian.net/rest/api/2/priority/10011",
+                    "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=xsmall&avatarId=10522&avatarType=issuetype",
+                    "name": "P1",
+                    "id": "10011"
+                  },
+                  "assignee": {
+                    "self": "https://contrail-jws.atlassian.net/rest/api/2/user?accountId=5d319491adb0f50c8c2bb675",
+                    "accountId": "5d319491adb0f50c8c2bb675",
+                    "emailAddress": "nuthanc@juniper.net",
+                    "avatarUrls": {
+                      "48x48": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=48&s=48",
+                      "24x24": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=24&s=24",
+                      "16x16": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=16&s=16",
+                      "32x32": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=32&s=32"
+                    },
+                    "displayName": "Nuthan Chandra",
+                    "active": true,
+                    "timeZone": "America/Los_Angeles",
+                    "accountType": "atlassian"
+                  },
+                  "issuetype": {
+                    "self": "https://contrail-jws.atlassian.net/rest/api/2/issuetype/10001",
+                    "id": "10001",
+                    "description": "A user story. Created by JIRA Software - do not edit or delete.",
+                    "iconUrl": "https://contrail-jws.atlassian.net/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype",
+                    "name": "Story",
+                    "subtask": false,
+                    "avatarId": 10315
+                  }
+                }
+              }
+            }
+          ],
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "issuelinks",
+            "type": "array",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "assignee",
+          "title": "Assignee",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": "https://contrail-jws.atlassian.net/rest/api/2/user/assignable/search?issueKey=CEM-14376&query=",
+          "allowedValues": [],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/user?accountId=5d319491adb0f50c8c2bb675",
+            "accountId": "5d319491adb0f50c8c2bb675",
+            "emailAddress": "nuthanc@juniper.net",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=48&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=24&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=16&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=32&s=32"
+            },
+            "displayName": "Nuthan Chandra",
+            "active": true,
+            "timeZone": "America/Los_Angeles",
+            "accountType": "atlassian"
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "assignee",
+            "type": "user",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "updated",
+          "title": "Updated",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": "2020-04-06T11:27:50.738-0700",
+          "renderedContent": "Today 11:27 AM",
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "updated",
+            "type": "datetime",
+            "renderer": null
+          }
+        },
+        {
+          "key": "status",
+          "title": "Status",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/status/3",
+            "description": "This issue is being actively worked on at the moment by the assignee.",
+            "iconUrl": "https://contrail-jws.atlassian.net/images/icons/statuses/inprogress.png",
+            "name": "In Progress",
+            "id": "3",
+            "statusCategory": {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/statuscategory/4",
+              "id": 4,
+              "key": "indeterminate",
+              "colorName": "yellow",
+              "name": "In Progress"
+            }
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "status",
+            "type": "status",
+            "renderer": null
+          }
+        },
+        {
+          "key": "components",
+          "title": "Components",
+          "editable": true,
+          "required": true,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10075",
+              "id": "10075",
+              "name": "Analytics - Appformix"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10037",
+              "id": "10037",
+              "name": "API",
+              "description": "API"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10862",
+              "id": "10862",
+              "name": "Architecture"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10360",
+              "id": "10360",
+              "name": "ATOM"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10183",
+              "id": "10183",
+              "name": "Bird - BGP"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/11007",
+              "id": "11007",
+              "name": "Blueprints"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10229",
+              "id": "10229",
+              "name": "Build Containers"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10248",
+              "id": "10248",
+              "name": "CI Infrastructure"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10191",
+              "id": "10191",
+              "name": "Contrail Analytics"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10730",
+              "id": "10730",
+              "name": "Contrail Command"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10361",
+              "id": "10361",
+              "name": "Contrail Config"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/11017",
+              "id": "11017",
+              "name": "Contrail Control Node"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10032",
+              "id": "10032",
+              "name": "Controller"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10906",
+              "id": "10906",
+              "name": "CVFM plugin"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10184",
+              "id": "10184",
+              "name": "Data path encryption"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10035",
+              "id": "10035",
+              "name": "Database",
+              "description": "Database"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10111",
+              "id": "10111",
+              "name": "Deployment - Ansible"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10112",
+              "id": "10112",
+              "name": "Deployment - Contrail Cloud"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10113",
+              "id": "10113",
+              "name": "Deployment - Helm"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10114",
+              "id": "10114",
+              "name": "Deployment - JuJu"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10115",
+              "id": "10115",
+              "name": "Deployment - Kolla"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10116",
+              "id": "10116",
+              "name": "Deployment - Kubernetes"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10117",
+              "id": "10117",
+              "name": "Deployment - Mesos"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10118",
+              "id": "10118",
+              "name": "Deployment - OpenShift"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10119",
+              "id": "10119",
+              "name": "Deployment - RHOSP"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10120",
+              "id": "10120",
+              "name": "Deployment - Windows"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10029",
+              "id": "10029",
+              "name": "Device Manager - Infrastructure",
+              "description": "Device Manager"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10212",
+              "id": "10212",
+              "name": "Documentation"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10164",
+              "id": "10164",
+              "name": "Fabric - Customizations ",
+              "description": "Vendor agnostic support"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10163",
+              "id": "10163",
+              "name": "Fabric - Device Configuration",
+              "description": "device specific configuration"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10162",
+              "id": "10162",
+              "name": "Fabric - Image Management",
+              "description": "image management"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10161",
+              "id": "10161",
+              "name": "Fabric - Overlay",
+              "description": "Mx/Qfx/Srx overlay features"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10160",
+              "id": "10160",
+              "name": "Fabric - Underlay",
+              "description": "underlay features/development for brownfield and greenfield"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/11032",
+              "id": "11032",
+              "name": "Feature Test Automation"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10250",
+              "id": "10250",
+              "name": "GO-API"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10159",
+              "id": "10159",
+              "name": "Job Manager - Infrastructure ",
+              "description": "Job manager infrastructure"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10848",
+              "id": "10848",
+              "name": "Junos Config"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10181",
+              "id": "10181",
+              "name": "MultiCloud Gateway"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10208",
+              "id": "10208",
+              "name": "None"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10859",
+              "id": "10859",
+              "name": "Patent",
+              "description": "Patent"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10033",
+              "id": "10033",
+              "name": "Schema Transformer",
+              "description": "Schema Transformer"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10036",
+              "id": "10036",
+              "name": "Service Monitor",
+              "description": "Service Monitor"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/11008",
+              "id": "11008",
+              "name": "spike"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10182",
+              "id": "10182",
+              "name": "StrongSwan"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/11029",
+              "id": "11029",
+              "name": "test"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10227",
+              "id": "10227",
+              "name": "Test Automation"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/11022",
+              "id": "11022",
+              "name": "Test Case Definition"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10249",
+              "id": "10249",
+              "name": "Test CI"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10210",
+              "id": "10210",
+              "name": "Test Deployments"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10209",
+              "id": "10209",
+              "name": "Test Features"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10211",
+              "id": "10211",
+              "name": "Test Solutions"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10213",
+              "id": "10213",
+              "name": "TOI"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10074",
+              "id": "10074",
+              "name": "UI"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10975",
+              "id": "10975",
+              "name": "UI help"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10857",
+              "id": "10857",
+              "name": "UX",
+              "description": "UX"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10121",
+              "id": "10121",
+              "name": "VIM plugins - Kubernetes"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10122",
+              "id": "10122",
+              "name": "VIM plugins - Mesos"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10123",
+              "id": "10123",
+              "name": "VIM plugins - OpenStack"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10124",
+              "id": "10124",
+              "name": "VIM plugins - vCenter"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10031",
+              "id": "10031",
+              "name": "vRouter Agent"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10109",
+              "id": "10109",
+              "name": "vRouter DPDK"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10073",
+              "id": "10073",
+              "name": "vRouter Kernel Module"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10110",
+              "id": "10110",
+              "name": "vRouter SRIOV"
+            }
+          ],
+          "content": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/component/10116",
+              "id": "10116",
+              "name": "Deployment - Kubernetes"
+            }
+          ],
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "components",
+            "type": "array",
+            "renderer": "frother-control-renderer"
+          }
+        },
+        {
+          "key": "timeoriginalestimate",
+          "title": "Original Estimate",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "timeoriginalestimate",
+            "type": "number",
+            "renderer": null
+          }
+        },
+        {
+          "key": "customfield_10052",
+          "title": "Time Spent",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+            "system": null,
+            "type": "datetime",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10053",
+          "title": "Security Vulnerability",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10014",
+              "value": "Yes",
+              "id": "10014"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10015",
+              "value": "No",
+              "id": "10015"
+            }
+          ],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+            "system": null,
+            "type": "option",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "description",
+          "title": "Description",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": "1. Deployment of Contrail with k8s version of 1.14.8\r\n2. Running sanity after deploying",
+          "renderedContent": "<p>1. Deployment of Contrail with k8s version of 1.14.8<br/>\n2. Running sanity after deploying</p>",
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "description",
+            "type": "string",
+            "renderer": "atlassian-wiki-renderer"
+          }
+        },
+        {
+          "key": "customfield_10010",
+          "title": "Sprint",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": [],
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+            "system": null,
+            "type": "array",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10057",
+          "title": "CVSS-Base-Score",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": "",
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+            "system": null,
+            "type": "string",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10212",
+          "title": "Scrum Team",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10302",
+              "value": "Fabric SVL Team",
+              "id": "10302"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10223",
+              "value": "Fabric BLR Team",
+              "id": "10223"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10216",
+              "value": "UI Team",
+              "id": "10216"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10234",
+              "value": "Contrail Networking Team",
+              "id": "10234"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10221",
+              "value": "Data Plane BLR Team",
+              "id": "10221"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10215",
+              "value": "Multicloud Team",
+              "id": "10215"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10212",
+              "value": "Config Team",
+              "id": "10212"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10224",
+              "value": "Control and Analytics BLR Team",
+              "id": "10224"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10217",
+              "value": "Deployment Team",
+              "id": "10217"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10219",
+              "value": "GO API Team",
+              "id": "10219"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10220",
+              "value": "EngProd Team",
+              "id": "10220"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10265",
+              "value": "AppFormix",
+              "id": "10265"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10225",
+              "value": "Test - SVL Team",
+              "id": "10225"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10226",
+              "value": "Test - BLR Team",
+              "id": "10226"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10261",
+              "value": "OVA",
+              "id": "10261"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10245",
+              "value": "Aurrion Product",
+              "id": "10245"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10246",
+              "value": "Aurrion Firmware",
+              "id": "10246"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10247",
+              "value": "Aurrion Platform - PIC",
+              "id": "10247"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10248",
+              "value": "Aurrion Platform - Device",
+              "id": "10248"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10249",
+              "value": "Aurrion Eng Ops",
+              "id": "10249"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10250",
+              "value": "AOF",
+              "id": "10250"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10258",
+              "value": "AOF INDIA",
+              "id": "10258"
+            }
+          ],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10226",
+            "value": "Test - BLR Team",
+            "id": "10226"
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+            "system": null,
+            "type": "option",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10179",
+          "title": "External Users",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": "https://contrail-jws.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_10179&showAvatar=true&query=",
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker",
+            "system": null,
+            "type": "array",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10213",
+          "title": "Pricing Tier",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10228",
+              "value": "Standard",
+              "id": "10228"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10229",
+              "value": "Preferred",
+              "id": "10229"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10230",
+              "value": "Advanced",
+              "id": "10230"
+            }
+          ],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+            "system": null,
+            "type": "option",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "timetracking",
+          "title": "Time tracking",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": {},
+          "renderedContent": {},
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "timetracking",
+            "type": "timetracking",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10059",
+          "title": "CVE-Id",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": "",
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+            "system": null,
+            "type": "string",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10203",
+          "title": "Contrail Architecture Committee Review",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10196",
+              "value": "Review by CAC - needed",
+              "id": "10196"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10195",
+              "value": "Review by CAC - In Progress",
+              "id": "10195"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10194",
+              "value": "Review by CAC - Complete",
+              "id": "10194"
+            }
+          ],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+            "system": null,
+            "type": "option",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10204",
+          "title": "Contrail Create Issue Message",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": "*Directions for creating a Jira issue: [see this document|https://docs.google.com/document/d/1GrCitsRJUlveip4Lrsbm1XdYc_7H6XeXwiLuqhTmY8I/edit]*",
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.toolkit:message",
+            "system": null,
+            "type": "string",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "security",
+          "title": "Security Level",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/securitylevel/10001",
+            "id": "10001",
+            "description": "",
+            "name": "Internal"
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "security",
+            "type": "securitylevel",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10008",
+          "title": "Epic Link",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.pyxis.greenhopper.jira:gh-epic-link",
+            "system": null,
+            "type": "any",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10009",
+          "title": "Parent Link",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": {
+            "hasEpicLinkFieldDependency": false,
+            "showField": false,
+            "nonEditableReason": {
+              "reason": "EPIC_LINK_SHOULD_BE_USED",
+              "message": "To set an epic as the parent, use the epic link instead"
+            }
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jpo:jpo-custom-field-parent",
+            "system": null,
+            "type": "any",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "summary",
+          "title": "Summary",
+          "editable": true,
+          "required": true,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": "Deployment and Sanity of Kubernetes 1.14",
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "summary",
+            "type": "string",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "subtasks",
+          "title": "Sub-tasks",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": [],
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "subtasks",
+            "type": "array",
+            "renderer": null
+          }
+        },
+        {
+          "key": "customfield_10084",
+          "title": "Target Version",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10159",
+              "value": "FutureRelease",
+              "id": "10159"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10262",
+              "value": "R3.1.6",
+              "id": "10262"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10263",
+              "value": "R3.2.13.1",
+              "id": "10263"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10158",
+              "value": "R3.2.15",
+              "id": "10158"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10264",
+              "value": "R3.2.15.1",
+              "id": "10264"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10260",
+              "value": "R3.2.16",
+              "id": "10260"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10324",
+              "value": "R3.2.17",
+              "id": "10324"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10047",
+              "value": "R4.1.3",
+              "id": "10047"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10157",
+              "value": "R4.1.4",
+              "id": "10157"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10317",
+              "value": "R4.1.4.1",
+              "id": "10317"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10235",
+              "value": "R4.1.5",
+              "id": "10235"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10050",
+              "value": "R5.1.0",
+              "id": "10050"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10117",
+              "value": "R1906",
+              "id": "10117"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10129",
+              "value": "R1907",
+              "id": "10129"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10151",
+              "value": "R1908",
+              "id": "10151"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10152",
+              "value": "R1909",
+              "id": "10152"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10153",
+              "value": "R1910",
+              "id": "10153"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10154",
+              "value": "R1911",
+              "id": "10154"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10155",
+              "value": "R1912",
+              "id": "10155"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10256",
+              "value": "R2002",
+              "id": "10256"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10257",
+              "value": "R2003",
+              "id": "10257"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10318",
+              "value": "R2003.1",
+              "id": "10318"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10282",
+              "value": "R2005",
+              "id": "10282"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10314",
+              "value": "R2008",
+              "id": "10314"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10315",
+              "value": "R2011",
+              "id": "10315"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10310",
+              "value": "R1912.L1",
+              "id": "10310"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10311",
+              "value": "R1912.L2",
+              "id": "10311"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10312",
+              "value": "R1912.L3",
+              "id": "10312"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10313",
+              "value": "R1912.L4",
+              "id": "10313"
+            }
+          ],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10282",
+            "value": "R2005",
+            "id": "10282"
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+            "system": null,
+            "type": "option",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10085",
+          "title": "Product Owner",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10036",
+              "value": "Marc",
+              "id": "10036"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10037",
+              "value": "Jacopo",
+              "id": "10037"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10038",
+              "value": "Nick",
+              "id": "10038"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10039",
+              "value": "Aniket",
+              "id": "10039"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10040",
+              "value": "Ranjini",
+              "id": "10040"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10236",
+              "value": "Anuja",
+              "id": "10236"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10222",
+              "value": "Surbhi",
+              "id": "10222"
+            }
+          ],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+            "system": null,
+            "type": "option",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10042",
+          "title": "Customer Name",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": "",
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+            "system": null,
+            "type": "string",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "reporter",
+          "title": "Reporter",
+          "editable": true,
+          "required": true,
+          "autoCompleteUrl": "https://contrail-jws.atlassian.net/rest/api/2/user/search?query=",
+          "allowedValues": [],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/user?accountId=5d319491adb0f50c8c2bb675",
+            "accountId": "5d319491adb0f50c8c2bb675",
+            "emailAddress": "nuthanc@juniper.net",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=48&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=24&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=16&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/86b9720e1f64954008153de4f106e22b?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FNC-0.png&size=32&s=32"
+            },
+            "displayName": "Nuthan Chandra",
+            "active": true,
+            "timeZone": "America/Los_Angeles",
+            "accountType": "atlassian"
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "reporter",
+            "type": "user",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10001",
+          "title": "Team",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.teams:rm-teams-custom-field-team",
+            "system": null,
+            "type": "any",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10045",
+          "title": "Product",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10006",
+              "value": "AppFormix",
+              "id": "10006"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10198",
+              "value": "ATOM",
+              "id": "10198"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10297",
+              "value": "ATOM Telemetry",
+              "id": "10297"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10029",
+              "value": "CEM",
+              "id": "10029"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10227",
+              "value": "Telco Cloud",
+              "id": "10227"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10150",
+              "value": "Contrail Cloud",
+              "id": "10150"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10007",
+              "value": "CSO",
+              "id": "10007"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10199",
+              "value": "JWEB",
+              "id": "10199"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10197",
+              "value": "Security Director",
+              "id": "10197"
+            },
+            {
+              "self": "https://contrail-jws.atlassian.net/rest/api/2/customFieldOption/10301",
+              "value": "JUKE",
+              "id": "10301"
+            }
+          ],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+            "system": null,
+            "type": "option",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10047",
+          "title": "Resolved",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+            "system": null,
+            "type": "datetime",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10048",
+          "title": "Resolved By",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": "https://contrail-jws.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_10048&fieldConfigId=10162&projectId=10027&showAvatar=true&query=",
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.atlassian.jira.plugin.system.customfieldtypes:userpicker",
+            "system": null,
+            "type": "user",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "customfield_10039",
+          "title": "Story point estimate",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+            "system": null,
+            "type": "number",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "duedate",
+          "title": "Due date",
+          "editable": true,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": null,
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "duedate",
+            "type": "date",
+            "renderer": "jira-text-renderer"
+          }
+        },
+        {
+          "key": "votes",
+          "title": "Votes",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": {
+            "self": "https://contrail-jws.atlassian.net/rest/api/2/issue/CEM-14376/votes",
+            "votes": 0,
+            "hasVoted": false
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "votes",
+            "type": "votes",
+            "renderer": null
+          }
+        },
+        {
+          "key": "servicedesk-approvals",
+          "title": "servicedesk-approvals",
+          "editable": false,
+          "required": false,
+          "autoCompleteUrl": null,
+          "allowedValues": [],
+          "content": {
+            "completedApprovals": []
+          },
+          "renderedContent": null,
+          "configuration": null,
+          "schema": {
+            "custom": null,
+            "system": "servicedesk-approvals",
+            "type": "servicedesk-approvals",
+            "renderer": null
+          }
+        }
+      ],
+      "expandAssigneeInSubtasks": false,
+      "expandAssigneeInIssuelinks": false,
+      "systemFields": {
+        "descriptionAdf": {
+          "value": "{\"version\":1,\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"1. Deployment of Contrail with k8s version of 1.14.8\"},{\"type\":\"hardBreak\"},{\"type\":\"text\",\"text\":\"2. Running sanity after deploying\"}]}]}"
+        },
+        "environmentAdf": {
+          "value": null
+        }
+      },
+      "customFields": {
+        "textareaAdf": []
+      },
+      "tabs": [],
+      "layoutItems": [
+        {
+          "location": "FOUNDATION",
+          "category": "FOUNDATION_CONTENT",
+          "items": []
+        },
+        {
+          "location": "FOUNDATION",
+          "category": "FOUNDATION_CONTEXT",
+          "items": []
+        },
+        {
+          "location": "CONTENT",
+          "category": "CONTENT_VISIBLE",
+          "items": [
+            {
+              "itemId": "description",
+              "type": "FIELD"
+            }
+          ]
+        },
+        {
+          "location": "CONTENT",
+          "category": "CONTENT_HIDDEN",
+          "items": []
+        },
+        {
+          "location": "CONTEXT",
+          "category": "CONTEXT_PRIMARY",
+          "items": [
+            {
+              "itemId": "assignee",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "reporter",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "priority",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10010",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10024",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10212",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10191",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "components",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "fixVersions",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10085",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10045",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10214",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10084",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "devSummary",
+              "type": "DEV_SUMMARY"
+            },
+            {
+              "itemId": "duedate",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "labels",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10008",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10042",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10052",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10053",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10057",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10059",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10063",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10070",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10203",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10213",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10232",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10009",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10227",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10179",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10001",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10039",
+              "type": "FIELD"
+            }
+          ]
+        },
+        {
+          "location": "CONTEXT",
+          "category": "CONTEXT_SECONDARY",
+          "items": [
+            {
+              "itemId": "timeoriginalestimate",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "timetracking",
+              "type": "FIELD"
+            }
+          ]
+        },
+        {
+          "location": "CONTEXT",
+          "category": "CONTEXT_HIDDEN",
+          "items": [
+            {
+              "itemId": "customfield_10047",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10048",
+              "type": "FIELD"
+            },
+            {
+              "itemId": "customfield_10204",
+              "type": "FIELD"
+            }
+          ]
+        }
+      ],
+      "isHybridAgilityProject": false,
+      "agile": {
+        "epic": {
+          "key": "customfield_10008"
+        }
+      }
+    },
+    "project": {
+      "id": "10027",
+      "name": "Contrail",
+      "key": "CEM",
+      "projectTypeKey": "software",
+      "simplified": false,
+      "avatarUrls": [
+        {
+          "key": "48x48",
+          "value": "https://contrail-jws.atlassian.net/secure/projectavatar?pid=10027&avatarId=10515"
+        },
+        {
+          "key": "24x24",
+          "value": "https://contrail-jws.atlassian.net/secure/projectavatar?size=small&s=small&pid=10027&avatarId=10515"
+        },
+        {
+          "key": "16x16",
+          "value": "https://contrail-jws.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=10027&avatarId=10515"
+        },
+        {
+          "key": "32x32",
+          "value": "https://contrail-jws.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=10027&avatarId=10515"
+        }
+      ],
+      "issueTypeHierarchy": null
+    }
+  }
+}

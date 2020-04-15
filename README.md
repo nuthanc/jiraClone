@@ -25,6 +25,8 @@
 
 ### Issues setup
 ##### Basic
+* Title
+* Issue_no
 * Type: Story, Bug, Task
 * Status: Open, In Progress, Closed
 * Details
@@ -37,3 +39,5 @@
 * issues/templates/issues/issue_form.html
 * project urls.py and issues urls.py
 * issues models.py and views.py
+* Styling issue_form using django-crispy-forms
+  * https://simpleisbetterthancomplex.com/tutorial/2018/08/13/how-to-use-bootstrap-4-forms-with-django.html

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>
+  {{issue.title}}
+  {% if issue.type == "ST" %}
+  <span class="badge badge-success">
+    {% elif issue.type == "BU" %}
+    <span class="badge badge-danger">
+      {% else %}
+      <span class="badge badge-primary">
+        {% endif %}
+        #{{issue.issue_no}}
+      </span>
+</h1>
+<p class="lead">{{issue.details}}</p>
+{% endblock %}

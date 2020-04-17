@@ -8,6 +8,7 @@ from django.urls import reverse
 class Issue(models.Model):
     title = models.CharField(blank=False, max_length=100)
     issue_no = models.AutoField(primary_key=True)
+
     class TypeOfIssue(models.TextChoices):
         STORY = 'ST', _('Story')
         BUG = 'BU', _('Bug')
@@ -33,4 +34,4 @@ class Issue(models.Model):
     details = models.TextField(blank=False)
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('issues:detail', kwargs={'pk': self.pk})

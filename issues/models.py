@@ -8,7 +8,7 @@ from django.urls import reverse
 class Issue(models.Model):
     title = models.CharField(blank=False, max_length=100)
     issue_no = models.AutoField(primary_key=True)
-
+    created_at = models.DateTimeField(auto_now=True)
     class TypeOfIssue(models.TextChoices):
         STORY = 'ST', _('Story')
         BUG = 'BU', _('Bug')

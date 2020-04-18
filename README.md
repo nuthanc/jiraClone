@@ -44,3 +44,4 @@
 #### DetailView for Issues
 * issues views.py, urls.py and issue_detail.html
 * Complete with issue_detail.html and start issue_list.html
+* Add get_context_data in IssueDetail view for passing the className to display appropriate colors for Issue type

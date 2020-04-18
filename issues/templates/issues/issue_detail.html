@@ -3,15 +3,10 @@
 {% block content %}
 <h1>
   {{issue.title}}
-  {% if issue.type == "ST" %}
-  <span class="badge badge-success">
-    {% elif issue.type == "BU" %}
-    <span class="badge badge-danger">
-      {% else %}
-      <span class="badge badge-primary">
-        {% endif %}
-        #{{issue.issue_no}}
-      </span>
+  <span class="{{className}}">
+    #{{issue.issue_no}}
+  </span>
 </h1>
 <p class="lead">{{issue.details}}</p>
+<p>{{ issue.created_at }}</p>
 {% endblock %}

@@ -2,7 +2,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h1>Create Issue</h1>
+
+    <h1>
+        {% if not form.instance.pk %}
+        Create Issue
+        {% else %}
+        Update Issue
+        {% endif %}
+    </h1>
     <form method="POST">{% csrf_token %}
         {{ form.title|as_crispy_field }}
         <div class="row mb-4">

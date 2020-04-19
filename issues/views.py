@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from django.utils import timezone
+from django.urls import reverse_lazy
 
 from . import models
 # Create your views here.
@@ -43,3 +44,11 @@ class IssueList(generic.list.ListView):
                 issue.className = "list-group-item-primary"
                 issue.textColor = "text-primary"
         return context
+
+class IssueUpdate(generic.edit.UpdateView):
+    model = models.Issue
+    fields = '__all__'
+
+class IssueDelete(generic.edit.DeleteView):
+    model = models.Issue
+    success_url = reverse_lazy('issues:list')

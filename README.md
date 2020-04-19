@@ -47,3 +47,8 @@
 * Add get_context_data in IssueDetail view for passing the className to display appropriate colors for Issue type
 ### ListView for Issues
 * Next loop issue_list in views.py and attach className to each issue to give colors in ListView
+### UpdateView for Issues
+* views.py and urls.py
+* https://docs.djangoproject.com/en/3.0/topics/class-based-views/generic-editing/
+### DeleteView for Issues
+* views.py, issue_confirm_delete urls.py

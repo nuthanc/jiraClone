@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Issues</h1>
+<ul class="list-group">
+  {% for issue in issue_list %}
+  <li class="list-group-item {{issue.className}}">
+    <a href="{% url 'issues:detail' pk=issue.pk %}" class="{{issue.textColor}}">
+      #{{issue.issue_no}}
+      {{issue.title}}
+    </a>
+  </li>
+  {% empty %}
+  <li>No issues yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

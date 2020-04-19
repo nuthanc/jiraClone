@@ -45,3 +45,5 @@
 * issues views.py, urls.py and issue_detail.html
 * Complete with issue_detail.html and start issue_list.html
 * Add get_context_data in IssueDetail view for passing the className to display appropriate colors for Issue type
+### ListView for Issues
+* Next loop issue_list in views.py and attach className to each issue to give colors in ListView

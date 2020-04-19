@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Home Page</h1>
-  <hr class="mt-0 mb-4">
-
-  <a class="btn btn-primary" role="button" href="{% url 'issues:create' %}">Create Issue</a>
+  <div class="jumbotron">
+    <h1 class="display-4">Jira Dashboard</h1>
+    <p class="lead">
+      Home page to Create Issue and View Issue
+    </p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary" role="button" href="{% url 'issues:create' %}">Create Issue</a>
+    <a class="btn btn-primary" role="button" href="{% url 'issues:list' %}">Issues List</a>
+  </div>
 {% endblock %}

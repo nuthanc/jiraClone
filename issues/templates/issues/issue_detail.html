@@ -7,6 +7,6 @@
     #{{issue.issue_no}}
   </span>
 </h1>
-<p class="lead">{{issue.details}}</p>
+<p class="lead">{{issue.details|linebreaks}}</p>
 <p>{{ issue.created_at }}</p>
 {% endblock %}

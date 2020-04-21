@@ -72,4 +72,4 @@
 * Need to have same directory structure as above since we are overriding
 * base_site.html which extends admin/base.html
 * We just really want to play with base_site.html
-* So copy that code to admin/base_site.html
+* So copy that code to admin/base_site.html(Note: Same template name should be used)

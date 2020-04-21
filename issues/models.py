@@ -6,7 +6,7 @@ from django.urls import reverse
 
 
 class Issue(models.Model):
-    title = models.CharField(blank=False, max_length=100)
+    title = models.CharField(blank=False, max_length=250)
     issue_no = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now=True)
     class TypeOfIssue(models.TextChoices):

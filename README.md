@@ -73,3 +73,10 @@
 * base_site.html which extends admin/base.html
 * We just really want to play with base_site.html
 * So copy that code to admin/base_site.html(Note: Same template name should be used)
+
+#### Changing DetailView for Admin page
+* Go to particular App's(issues in our case) admin.py
+* Create a class(Class name Convention: Name of model appended with Admin) which inherits from admin.ModelAdmin
+* Add field attributes
+* Register this class along with the model
+* readonly_fields should be added in 2 places(fields and readonly_fields)

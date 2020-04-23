@@ -7,6 +7,7 @@ class IssueAdmin(admin.ModelAdmin):
   readonly_fields = ('issue_no',)
 
   search_fields = ['issue_no', 'details']
+  list_filter = ['type', 'status']
 
 
 admin.site.register(Issue, IssueAdmin)

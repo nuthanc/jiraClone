@@ -1,4 +1,4 @@
-commit_message=`git diff|grep "+###"|awk 'NR==1{print $0}'|tr -d '+#'`
+commit_message=`git diff|grep "+##"|awk 'NR==1{print $0}'|tr -d '+#'`
 
 echo ${commit_message}
 

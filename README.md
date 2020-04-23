@@ -81,7 +81,11 @@
 * Register this class along with the model
 * readonly_fields should be added in 2 places(fields and readonly_fields)
 
-### Adding search to admin
+#### Adding search to admin
 * Same as ordering fields, create a class with the convention mentioned there
 * Add search_fields attribute
 * Need to register the class along with the model
+
+#### Adding filters to admin
+* Register and class same as Adding search to Admin.
+* Add list_filter attribute 

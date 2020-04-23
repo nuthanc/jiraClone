@@ -80,3 +80,8 @@
 * Add field attributes
 * Register this class along with the model
 * readonly_fields should be added in 2 places(fields and readonly_fields)
+
+### Adding search to admin
+* Same as ordering fields, create a class with the convention mentioned there
+* Add search_fields attribute
+* Need to register the class along with the model

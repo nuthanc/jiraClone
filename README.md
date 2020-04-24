@@ -89,3 +89,11 @@
 #### Adding filters to admin
 * Register and class same as Adding search to Admin.
 * Add list_filter attribute 
+
+#### Adding fields to ListView
+* list_display attribut in admin.py Custom class registered above
+
+#### Editing from ListView of admin
+* First they have to displayed in list_display to edit it
+* Attribute of list_editable in IssueAdmin class
+* Editing in ListView without going to DetailView

@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
+    path('', TemplateView.as_view(template_name="social_app/index.html")),
     path('admin/', admin.site.urls),
-    path('', views.HomePage.as_view(), name='home'),
+    path('accounts/', include('allauth.urls')),
+    path('home/', views.HomePage.as_view(), name='home'),
     path('issues/', include('issues.urls', namespace='issues'))
 ]

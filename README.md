@@ -91,9 +91,21 @@
 * Add list_filter attribute 
 
 #### Adding fields to ListView
-* list_display attribut in admin.py Custom class registered above
+* list_display attribute in admin.py Custom class registered above
 
 #### Editing from ListView of admin
 * First they have to displayed in list_display to edit it
 * Attribute of list_editable in IssueAdmin class
 * Editing in ListView without going to DetailView
+
+#### Google SignIn
+* Set up Google login to sign up users on Django
+* https://medium.com/@whizzoe/in-5-mins-set-up-google-login-to-sign-up-users-on-django-e71d5c38f5d5
+* https://realpython.com/adding-social-authentication-to-django/
+* https://django-allauth.readthedocs.io/en/latest/templates.html  
+```python
+pip install django-allauth
+```
+* Update settings.py
+* Use the above 2 links and complete authentication
+* Solved the issue of Google Auth not appearing by adding Add all sites in Social applications

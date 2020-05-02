@@ -109,3 +109,7 @@ pip install django-allauth
 * Update settings.py
 * Use the above 2 links and complete authentication
 * Solved the issue of Google Auth not appearing by adding Add all sites in Social applications
+
+#### Google Sign in problem
+* django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist
+* Changing the siteid worked

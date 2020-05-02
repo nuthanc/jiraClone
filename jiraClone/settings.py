@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social_app',
     'comments',
     'issues',
     'projects',
@@ -137,7 +136,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 2
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = ''
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {

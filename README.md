@@ -113,3 +113,6 @@ pip install django-allauth
 #### Google Sign in problem
 * django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist
 * Changing the siteid worked
+
+### Override all-auth login
+* Add account login.html in project templates

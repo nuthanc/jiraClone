@@ -116,3 +116,4 @@ pip install django-allauth
 
 ### Override all-auth login
 * Add account login.html in project templates
+* Add static directory and css styling for login

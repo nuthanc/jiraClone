@@ -103,6 +103,7 @@
 * https://medium.com/@whizzoe/in-5-mins-set-up-google-login-to-sign-up-users-on-django-e71d5c38f5d5
 * https://realpython.com/adding-social-authentication-to-django/
 * https://django-allauth.readthedocs.io/en/latest/templates.html  
+* https://dev.to/gajesh/the-complete-django-allauth-guide-la3
 ```python
 pip install django-allauth
 ```

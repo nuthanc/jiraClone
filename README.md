@@ -104,6 +104,7 @@
 * https://realpython.com/adding-social-authentication-to-django/
 * https://django-allauth.readthedocs.io/en/latest/templates.html  
 * https://dev.to/gajesh/the-complete-django-allauth-guide-la3
+* https://django-allauth.readthedocs.io/en/latest/forms.html#account-forms
 ```python
 pip install django-allauth
 ```

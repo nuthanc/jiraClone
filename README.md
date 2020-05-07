@@ -119,3 +119,11 @@ pip install django-allauth
 ### Override all-auth login
 * Add account login.html in project templates
 * Add static directory and css styling for login
+
+### Add accounts app
+* Ref links
+```
+https://django-allauth.readthedocs.io/en/latest/forms.html#login-allauth-account-forms-loginform
+https://github.com/nuthanc/django_my_blog/blob/master/blog_app/forms.py
+https://github.com/nuthanc/simplesocial/tree/master/accounts
+```

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts',
+    'users',
     'comments',
     'issues',
     'projects',
@@ -156,5 +156,5 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 ACCOUNT_FORMS = {
-'login': 'accounts.forms.MyCustomLoginForm',
+'login': 'users.forms.MyCustomLoginForm',
 }

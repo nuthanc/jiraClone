@@ -1,11 +1,10 @@
-from allauth.account.forms import SignupForm
+from allauth.account.forms import LoginForm
 from django import forms
 
-class CustomSignupForm(SignupForm):
-    first_name = forms.CharField(max_length=30, label='First Name')
-    last_name = forms.CharField(max_length=30, label='Last Name')
-    def signup(self, request, user):
-        user.first_name = self.cleaned_data['first_name']
-        user.last_name = self.cleaned_data['last_name']
-        user.save()
-        return user
+class MyCustomLoginForm(LoginForm):
+    def login(self, *args, **kwargs):
+
+        # Add your own processing here.
+
+        # You must return the original result.
+        return super(MyCustomLoginForm, self).login(*args, **kwargs)

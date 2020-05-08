@@ -156,5 +156,5 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 ACCOUNT_FORMS = {
-'signup': 'YourProject.forms.CustomSignupForm',
+'login': 'accounts.forms.MyCustomLoginForm',
 }

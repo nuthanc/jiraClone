@@ -9,8 +9,13 @@ from . import models
 
 class IssueCreate(generic.edit.CreateView):
     model = models.Issue
-    fields = '__all__'
+    fields = ('title', 'type', 'status', 'details')
 
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+        return super().form_valid(form)
 
 class IssueDetail(generic.detail.DetailView):
     model = models.Issue

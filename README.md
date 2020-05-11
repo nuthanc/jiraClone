@@ -131,4 +131,7 @@ https://github.com/nuthanc/simplesocial/tree/master/accounts
 https://github.com/nuthanc/django_my_blog/blob/master/blog_app/forms.py
 
 https://wsvincent.com/django-allauth-tutorial-custom-user-model/
+
+* Main link below
+https://github.com/nuthanc/simplesocial/blob/master/posts/views.py
 ```

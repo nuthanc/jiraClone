@@ -9,6 +9,7 @@
 </h1>
 <p class="lead">{{issue.details|linebreaks}}</p>
 <p>{{ issue.created_at }}</p>
+<p>Created by <strong>{{ issue.user.username }}</strong></p>
 <a class="btn btn-primary" role="button" href="{% url 'issues:edit' pk=issue.pk %}">Edit</a>
 <a class="btn btn-danger" role="button" href="{% url 'issues:delete' pk=issue.pk %}">Delete</a>
 {% endblock %}

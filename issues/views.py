@@ -2,12 +2,12 @@ from django.shortcuts import render
 from django.views import generic
 from django.utils import timezone
 from django.urls import reverse_lazy
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 from . import models
 # Create your views here.
 
 
-class IssueCreate(generic.edit.CreateView):
+class IssueCreate(LoginRequiredMixin, generic.edit.CreateView):
     model = models.Issue
     fields = ('title', 'type', 'status', 'details')
 
@@ -50,9 +50,15 @@ class IssueList(generic.list.ListView):
                 issue.textColor = "text-primary"
         return context
 
-class IssueUpdate(generic.edit.UpdateView):
+class IssueUpdate(LoginRequiredMixin, generic.edit.UpdateView):
     model = models.Issue
-    fields = '__all__'
+    fields = ('title', 'type', 'status', 'details')
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+        return super().form_valid(form)
 
 class IssueDelete(generic.edit.DeleteView):
     model = models.Issue

@@ -135,3 +135,7 @@ https://wsvincent.com/django-allauth-tutorial-custom-user-model/
 * Main link below
 https://github.com/nuthanc/simplesocial/blob/master/posts/views.py
 ```
+
+### LoginRequired Mixin for Authentication
+* Ref link: https://github.com/nuthanc/django_my_blog/blob/master/blog_app/views.py
+* login_url and redirect_field_name can be given(optional)

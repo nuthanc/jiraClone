@@ -3,9 +3,11 @@ from django.utils.translation import gettext_lazy as _
 from django.urls import reverse
 
 # Create your models here.
-
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 class Issue(models.Model):
+    user = models.ForeignKey(User, related_name='issues',on_delete=models.CASCADE)
     title = models.CharField(blank=False, max_length=250)
     issue_no = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now=True)

@@ -119,3 +119,43 @@ pip install django-allauth
 ### Override all-auth login
 * Add account login.html in project templates
 * Add static directory and css styling for login
+
+### Add accounts app
+* Ref links
+```
+https://django-allauth.readthedocs.io/en/latest/forms.html#login-allauth-account-forms-loginform
+https://github.com/nuthanc/django_my_blog/blob/master/blog_app/forms.py
+
+https://github.com/nuthanc/simplesocial/tree/master/accounts
+
+https://github.com/nuthanc/django_my_blog/blob/master/blog_app/forms.py
+
+https://wsvincent.com/django-allauth-tutorial-custom-user-model/
+
+* Main link below
+https://github.com/nuthanc/simplesocial/blob/master/posts/views.py
+```
+
+### LoginRequired Mixin for Authentication
+* Ref link: https://github.com/nuthanc/django_my_blog/blob/master/blog_app/views.py
+* login_url and redirect_field_name can be given(optional)
+
+### Adding new field to existing model
+* https://stackoverflow.com/questions/24311993/how-to-add-a-new-field-to-a-model-with-new-django-migrations
+
+### Debug migrate issue
+```
+django.db.utils.IntegrityError: The row in table 'django_admin_log' with primary key '1' has an invalid foreign key: django_admin_log.user_id contains a value '1' that does not have a corresponding value in auth_user.id
+```
+
+```
+python manage.py dbshell 
+.tables
+select * from django_admin_log
+```
+
+```py
+python manage.py shell 
+from issues.models import Issue
+print(Issue.objects.all())
+```

@@ -173,3 +173,5 @@ python manage.py shell
 from issues.models import Issue
 print(Issue.objects.all())
 ```
+* Give some default value to user which needs to be an object
+* https://stackoverflow.com/questions/42733221/django-db-utils-integrityerror-not-null-constraint-failed-products-product-ima

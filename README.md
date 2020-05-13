@@ -151,7 +151,21 @@ django.db.utils.IntegrityError: The row in table 'django_admin_log' with primary
 ```
 python manage.py dbshell 
 .tables
-select * from django_admin_log
+select * from django_admin_log;
+select user_id from django_admin_log where id=1;
+# To get column names, use the below
+PRAGMA table_info(django_admin_log);
+
+0|id|integer|1||1
+1|action_time|datetime|1||0
+2|object_id|text|0||0
+3|object_repr|varchar(200)|1||0
+4|change_message|text|1||0
+5|content_type_id|integer|0||0
+6|user_id|integer|1||0
+7|action_flag|smallint unsigned|1||0
+
+UPDATE django_admin_log SET user_id=5 where user_id=1;
 ```
 
 ```py

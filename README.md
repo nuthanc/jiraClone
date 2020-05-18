@@ -175,3 +175,10 @@ print(Issue.objects.all())
 ```
 * Give some default value to user which needs to be an object
 * https://stackoverflow.com/questions/42733221/django-db-utils-integrityerror-not-null-constraint-failed-products-product-ima
+
+### Deleted migration and db and started again
+* Deleted the migrations and sqlite3 db
+* Applied makemigrations and migrate to the whole application
+* Created superuser
+* Followed the steps given in Medium link(Refer above)
+* Changed SITE_ID in settings.py

@@ -179,6 +179,8 @@ print(Issue.objects.all())
 ### Deleted migration and db and started again
 * Deleted the migrations and sqlite3 db
 * Applied makemigrations and migrate to the whole application
+* Also had to make migrations to issues
 * Created superuser
 * Followed the steps given in Medium link(Refer above)
 * Changed SITE_ID in settings.py
+* Add issues migration to eliminate table not found error

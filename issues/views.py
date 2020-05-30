@@ -5,6 +5,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from . import models
 from comments.forms import CommentForm
+from django.http import HttpResponseRedirect
 # Create your views here.
 
 
@@ -33,6 +34,7 @@ def issue_detail(request, pk):
             new_comment.user = request.user
             # Save the comment to the database
             new_comment.save()
+            return HttpResponseRedirect(request.path_info)
     else:
         comment_form = CommentForm()
     data = {

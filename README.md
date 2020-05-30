@@ -200,3 +200,5 @@ print(Issue.objects.all())
 * Add post request in issue_detail function
 * Pass comment_form to issue_detail.html
 * Add bootstrap classes in CommentForm widgets attrs
+* Clear the form after submitting by adding comment_form again, but if refresh is hit, it causes duplication
+* So redirect to same page

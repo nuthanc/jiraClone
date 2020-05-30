@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <h1>
   {{issue.title}}
   <span class="{{className}}">
@@ -9,15 +7,27 @@
 </h1>
 <p class="font-weight-normal">{{issue.details|linebreaks}}</p>
 <p class="font-weight-light">{{ issue.created_at }}</p>
-<a class="btn btn-primary" role="button" href="{% url 'issues:edit' pk=issue.pk %}">Edit</a>
-<a class="btn btn-danger" role="button" href="{% url 'issues:delete' pk=issue.pk %}">Delete</a>
+<a
+  class="btn btn-primary"
+  role="button"
+  href="{% url 'issues:edit' pk=issue.pk %}"
+  >Edit</a
+>
+<a
+  class="btn btn-danger"
+  role="button"
+  href="{% url 'issues:delete' pk=issue.pk %}"
+  >Delete</a
+>
+
+<!-- Existing comments -->
 
 <h5 class="mt-3">Comments:</h5>
 <div class="container">
   {% for comment in comments %}
   <div class="card">
     <div class="card-body">
-      {{ comment.content }} 
+      {{ comment.content }}
     </div>
   </div>
   <p class="font-weight-light">
@@ -28,5 +38,15 @@
   </p>
   {% endfor %}
 </div>
+
+<!-- Comment Form for new comments -->
+<form method="post" style="margin-top: 1.3em;">
+  <div class="form-group">
+    {% csrf_token %}
+    <label for="content">New Comment</label>
+    {{ comment_form.content }}
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
 {% endblock %}

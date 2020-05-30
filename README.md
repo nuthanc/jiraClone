@@ -195,3 +195,8 @@ print(Issue.objects.all())
 * https://djangocentral.com/creating-comments-system-with-django/
 * Create forms.py in comments
 * Modify IssueDetail to issue_detail and modify url for that
+
+### Display CommentForm in post details page
+* Add post request in issue_detail function
+* Pass comment_form to issue_detail.html
+* Add bootstrap classes in CommentForm widgets attrs

@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from . import models
+from comments.forms import CommentForm
 # Create your views here.
 
 
@@ -22,9 +23,22 @@ def issue_detail(request, pk):
     template_name = 'issues/issue_detail.html'
     issue = models.Issue.objects.get(pk=pk)
     comments = issue.comments.all()
+    # Comment posted
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            # Create Comment object but don't save to database yet
+            new_comment = comment_form.save(commit=False)
+            new_comment.issue = issue
+            new_comment.user = request.user
+            # Save the comment to the database
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
     data = {
         'issue': issue,
-        'comments': comments
+        'comments': comments,
+        'comment_form': comment_form
     }
     return render(request, template_name, data)
 

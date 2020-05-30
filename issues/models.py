@@ -11,6 +11,8 @@ class Issue(models.Model):
     title = models.CharField(blank=False, max_length=250)
     issue_no = models.AutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now=True)
+    details = models.TextField(blank=False)
+
     class TypeOfIssue(models.TextChoices):
         STORY = 'ST', _('Story')
         BUG = 'BU', _('Bug')
@@ -32,8 +34,6 @@ class Issue(models.Model):
         choices=Status.choices,
         default=Status.OPEN,
     )
-
-    details = models.TextField(blank=False)
 
     def get_absolute_url(self):
         return reverse('issues:detail', kwargs={'pk': self.pk})

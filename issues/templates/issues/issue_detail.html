@@ -7,8 +7,26 @@
     #{{issue.issue_no}}
   </span>
 </h1>
-<p class="lead">{{issue.details|linebreaks}}</p>
-<p>{{ issue.created_at }}</p>
+<p class="font-weight-normal">{{issue.details|linebreaks}}</p>
+<p class="font-weight-light">{{ issue.created_at }}</p>
 <a class="btn btn-primary" role="button" href="{% url 'issues:edit' pk=issue.pk %}">Edit</a>
 <a class="btn btn-danger" role="button" href="{% url 'issues:delete' pk=issue.pk %}">Delete</a>
+
+<h5 class="mt-3">Comments:</h5>
+<div class="container">
+  {% for comment in comments %}
+  <div class="card">
+    <div class="card-body">
+      {{ comment.content }} 
+    </div>
+  </div>
+  <p class="font-weight-light">
+    {{ comment.user}}
+    <span>
+      {{ comment.created }}
+    </span>
+  </p>
+  {% endfor %}
+</div>
+
 {% endblock %}

@@ -184,3 +184,14 @@ print(Issue.objects.all())
 * Followed the steps given in Medium link(Refer above)
 * Changed SITE_ID in settings.py
 * Add issues migration to eliminate table not found error
+
+### Add model to comments
+* Ref link: https://tutorial-extensions.djangogirls.org/en/homework_create_more_models/
+* Create model in comments models.py
+* https://stackoverflow.com/questions/1737017/django-auto-now-and-auto-now-add
+* The related_name option in models.ForeignKey allows us to have access to comments from within the Issue model.
+* Register Comment in comments admin.py
+* Next task: Add comments in posts templates and either create Views for comments or Form in forms.py
+* https://djangocentral.com/creating-comments-system-with-django/
+* Create forms.py in comments
+* Modify IssueDetail to issue_detail and modify url for that

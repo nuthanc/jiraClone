@@ -18,20 +18,15 @@ class IssueCreate(LoginRequiredMixin, generic.edit.CreateView):
         return super().form_valid(form)
 
 
-class IssueDetail(generic.detail.DetailView):
-    model = models.Issue
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-
-        if context['issue'].type == "ST":
-            context['className'] = "badge badge-success"
-        elif context['issue'].type == "BU":
-            context['className'] = "badge badge-danger"
-        else:
-            context['className'] = "badge badge-primary"
-
-        return context
+def issue_detail(request, pk):
+    template_name = 'issues/issue_detail.html'
+    issue = models.Issue.objects.get(pk=pk)
+    comments = issue.comments.all()
+    data = {
+        'issue': issue,
+        'comments': comments
+    }
+    return render(request, template_name, data)
 
 class IssueList(generic.list.ListView):
     # paginate_by = 2 For 2 issues per page.

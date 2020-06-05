@@ -6,6 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from . import models
 from comments.forms import CommentForm
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -19,7 +20,7 @@ class IssueCreate(LoginRequiredMixin, generic.edit.CreateView):
         self.object.save()
         return super().form_valid(form)
 
-
+@login_required
 def issue_detail(request, pk):
     template_name = 'issues/issue_detail.html'
     issue = models.Issue.objects.get(pk=pk)

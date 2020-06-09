@@ -23,7 +23,7 @@
 <!-- Existing comments -->
 
 <h5 class="mt-3">Comments:</h5>
-<div class="container">
+<div class="container" id="comment-content">
   {% for comment in comments %}
   <div class="card">
     <div class="card-body">
@@ -40,7 +40,7 @@
 </div>
 
 <!-- Comment Form for new comments -->
-<form method="post" style="margin-top: 1.3em;">
+<form method="post" id="comment-form" style="margin-top: 1.3em;">
   {% csrf_token %}
   <div class="form-group">
     <label for="content">New Comment</label>
@@ -49,4 +49,53 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-{% endblock %}
+{% endblock %} 
+
+
+{% block javascript %}
+<script>
+    /*
+        On submiting the form, send the POST ajax
+        request to server and after successfull submission
+        display the object.
+    */
+  $("#comment-form").submit(function (e) {
+    // preventing from page reload and default actions
+    e.preventDefault();
+        // serialize the data for sending the form data.
+        var serializedData = $(this).serialize();
+        // make POST ajax call
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'issues:detail' pk=issue.pk%}",
+            data: serializedData,
+            success: function (response) {
+              // on successfull creating object
+              // 1. clear the form.
+              console.log(response);
+              $("#comment-form").trigger('reset');
+              // display the newly friend to table.
+              var instance = JSON.parse(response["instance"]);
+              var fields = instance[0]["fields"];
+              $("#comment-content").prepend(
+                `<div class="card">
+                  <div class="card-body">
+                    ${fields["content"]||""}
+                  </div>
+                </div>
+                <p class="font-weight-light">
+                  ${fields["user"]||""}
+                  <span class="float-right">
+                  ${fields["created"]||""}
+                  </span>
+                </p>`
+                )
+            },
+            error: function (response) {
+                // alert the error if any error occured
+                alert(response["responseJSON"]["error"]);
+            }
+        })
+  })
+</script>
+{% endblock javascript %}

@@ -202,3 +202,23 @@ print(Issue.objects.all())
 * Add bootstrap classes in CommentForm widgets attrs
 * Clear the form after submitting by adding comment_form again, but if refresh is hit, it causes duplication
 * So redirect to same page
+
+### AJAX requests
+* Ref links: 
+* https://www.pluralsight.com/guides/work-with-ajax-django
+* https://dev.to/coderasha/how-to-send-django-form-with-ajax-4bpo
+* https://www.codingforentrepreneurs.com/blog/ajaxify-django-forms
+* https://docs.djangoproject.com/en/3.0/topics/class-based-views/generic-editing/#ajax-example
+
+### Comments AJAX request
+* Include jQuery in base.html
+* Add block javascript in issue_detail.html
+* Give comment form an id of comment-form
+
+### Serialize error fixed
+* Tried giving instance which was empty cause save returned already to new_comment
+* But ser_instance is the below
+```
+instance: "[{"model": "comments.comment", "pk": 56, "fields": {"content": "Another check", "issue": 4, "user": 3, "created": "2020-06-09T19:17:03.053Z", "modified": "2020-06-09T19:17:03.053Z"}}]"
+```
+* So need custom serialization

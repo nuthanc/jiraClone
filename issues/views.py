@@ -5,7 +5,8 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from . import models
 from comments.forms import CommentForm
-from django.http import HttpResponseRedirect
+from django.http import JsonResponse
+from django.core import serializers
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -26,7 +27,7 @@ def issue_detail(request, pk):
     issue = models.Issue.objects.get(pk=pk)
     comments = issue.comments.all()
     # Comment posted
-    if request.method == 'POST':
+    if request.is_ajax and request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             # Create Comment object but don't save to database yet
@@ -35,7 +36,10 @@ def issue_detail(request, pk):
             new_comment.user = request.user
             # Save the comment to the database
             new_comment.save()
-            return HttpResponseRedirect(request.path_info)
+            ser_instance = serializers.serialize('json', [ new_comment, ])
+            return JsonResponse({"instance": ser_instance}, status=200)
+        else: # Some form error
+            return JsonResponse({"error": comment_form.errors}, status=400)
     else:
         comment_form = CommentForm()
     data = {

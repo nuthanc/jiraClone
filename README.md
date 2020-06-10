@@ -222,3 +222,9 @@ print(Issue.objects.all())
 instance: "[{"model": "comments.comment", "pk": 56, "fields": {"content": "Another check", "issue": 4, "user": 3, "created": "2020-06-09T19:17:03.053Z", "modified": "2020-06-09T19:17:03.053Z"}}]"
 ```
 * So need custom serialization
+
+### Custom serialization
+* Use response_data to send JSON response
+* Change comment created format using strftime
+* Link: https://stackoverflow.com/questions/39609234/django-ajax-response-date-and-time-format
+* Change parsing in AJAX response

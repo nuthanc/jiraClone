@@ -228,3 +228,6 @@ instance: "[{"model": "comments.comment", "pk": 56, "fields": {"content": "Anoth
 * Change comment created format using strftime
 * Link: https://stackoverflow.com/questions/39609234/django-ajax-response-date-and-time-format
 * Change parsing in AJAX response
+```json
+"python.linting.pylintArgs": ["--load-plugins", "pylint_django"]
+```

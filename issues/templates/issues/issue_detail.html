@@ -62,31 +62,33 @@
   $("#comment-form").submit(function (e) {
     // preventing from page reload and default actions
     e.preventDefault();
-        // serialize the data for sending the form data.
-        var serializedData = $(this).serialize();
         // make POST ajax call
         $.ajax({
             type: 'POST',
             url: "{% url 'issues:detail' pk=issue.pk%}",
-            data: serializedData,
+            data: {
+              content: $('#content').val(),
+              csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
             success: function (response) {
               // on successfull creating object
               // 1. clear the form.
               console.log(response);
+              var user = JSON.parse(response["user"]);
+              // console.log(user);
+              var fields = user[0]["fields"];
               $("#comment-form").trigger('reset');
               // display the newly friend to table.
-              var instance = JSON.parse(response["instance"]);
-              var fields = instance[0]["fields"];
-              $("#comment-content").prepend(
+              $("#comment-content").append(
                 `<div class="card">
                   <div class="card-body">
-                    ${fields["content"]||""}
+                    ${response.content||""}
                   </div>
                 </div>
                 <p class="font-weight-light">
-                  ${fields["user"]||""}
+                  ${fields["username"]||""}
                   <span class="float-right">
-                  ${fields["created"]||""}
+                  ${response.created||""}
                   </span>
                 </p>`
                 )

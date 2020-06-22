@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from . import models
 from comments.forms import CommentForm
 from django.http import JsonResponse
-# from django.core import serializers
+from django.core import serializers
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -38,7 +38,7 @@ def issue_detail(request, pk):
             # Save the comment to the database
             new_comment.save()
             response_data['content'] = new_comment.content
-            response_data['user'] = new_comment.user
+            response_data['user'] = serializers.serialize('json', [ new_comment.user, ])
             response_data['created'] = new_comment.created
             # ser_instance = serializers.serialize('json', [ new_comment, ])
             # return JsonResponse({"instance": ser_instance}, status=200)

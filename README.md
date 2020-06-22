@@ -231,3 +231,4 @@ instance: "[{"model": "comments.comment", "pk": 56, "fields": {"content": "Anoth
 ```json
 "python.linting.pylintArgs": ["--load-plugins", "pylint_django"]
 ```
+* Added custom serialization with response_data as object, custom serialize of User and then jsonResponse

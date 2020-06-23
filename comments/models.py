@@ -17,8 +17,8 @@ class Comment(models.Model):
   def save(self, *args, **kwargs):
         ''' On save, update timestamps '''
         if not self.id:
-            self.created = timezone.now()
-        self.modified = timezone.now()
+            self.created = timezone.localtime(timezone.now())
+        self.modified = timezone.localtime(timezone.now())
         return super(Comment, self).save(*args, **kwargs)
   
   def __str__(self):

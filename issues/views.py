@@ -39,7 +39,8 @@ def issue_detail(request, pk):
             new_comment.save()
             response_data['content'] = new_comment.content
             response_data['user'] = serializers.serialize('json', [ new_comment.user, ])
-            response_data['created'] = new_comment.created
+            print("Created",new_comment.created)
+            response_data['created'] = new_comment.created.strftime("%B %d, %Y, %I:%M %p")
             # ser_instance = serializers.serialize('json', [ new_comment, ])
             # return JsonResponse({"instance": ser_instance}, status=200)
             return JsonResponse(response_data)

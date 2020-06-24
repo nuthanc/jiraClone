@@ -21,31 +21,32 @@ class IssueCreate(LoginRequiredMixin, generic.edit.CreateView):
         self.object.save()
         return super().form_valid(form)
 
+def ajax_comment_json_response(request, issue):
+    response_data = {}
+    comment_form = CommentForm(data=request.POST)
+    if comment_form.is_valid():
+        # Create Comment object but don't save to database yet
+        new_comment = comment_form.save(commit=False)
+        new_comment.issue = issue
+        new_comment.user = request.user
+        # Save the comment to the database
+        new_comment.save()
+        response_data['content'] = new_comment.content
+        response_data['user'] = serializers.serialize('json', [ new_comment.user, ])
+        print("Created",new_comment.created)
+        response_data['created'] = new_comment.created.strftime("%B %d, %Y, %I:%M %p")
+        return JsonResponse(response_data)
+    else: # Some form error
+        return JsonResponse({"error": comment_form.errors}, status=400)
+
 @login_required
 def issue_detail(request, pk):
     template_name = 'issues/issue_detail.html'
     issue = models.Issue.objects.get(pk=pk)
     comments = issue.comments.all()
-    response_data = {}
     # Comment posted
     if request.is_ajax and request.method == 'POST':
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            # Create Comment object but don't save to database yet
-            new_comment = comment_form.save(commit=False)
-            new_comment.issue = issue
-            new_comment.user = request.user
-            # Save the comment to the database
-            new_comment.save()
-            response_data['content'] = new_comment.content
-            response_data['user'] = serializers.serialize('json', [ new_comment.user, ])
-            print("Created",new_comment.created)
-            response_data['created'] = new_comment.created.strftime("%B %d, %Y, %I:%M %p")
-            # ser_instance = serializers.serialize('json', [ new_comment, ])
-            # return JsonResponse({"instance": ser_instance}, status=200)
-            return JsonResponse(response_data)
-        else: # Some form error
-            return JsonResponse({"error": comment_form.errors}, status=400)
+        return ajax_comment_json_response(request, issue)
     else:
         comment_form = CommentForm()
     data = {

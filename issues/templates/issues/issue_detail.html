@@ -41,41 +41,44 @@
     // preventing from page reload and default actions
     e.preventDefault();
         // make POST ajax call
-        $.ajax({
-            type: 'POST',
-            url: "{% url 'issues:detail' pk=issue.pk%}",
-            data: {
-              content: $('#content').val(),
-              csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
-            },
-            success: function (response) {
-              // on successfull creating object
-              // 1. clear the form.
-              console.log(response);
-              var user = JSON.parse(response["user"]);
-              // console.log(user);
-              var fields = user[0]["fields"];
-              $("#comment-form").trigger('reset');
-              // display the newly friend to table.
-              $("#comment-content").append(
-                `<div class="card">
-                  <div class="card-body">
-                    ${response.content||""}
-                  </div>
-                </div>
-                <p class="font-weight-light">
-                  ${fields["username"]||""}
-                  <span class="float-right">
-                  ${response.created||""}
-                  </span>
-                </p>`
-                )
-            },
-            error: function (response) {
-                // alert the error if any error occured
-                alert(response["responseJSON"]["error"]);
-            }
-        })
+    $.ajax({
+      type: 'POST',
+      url: "{% url 'issues:detail' pk=issue.pk%}",
+      data: {
+        content: $('#content').val(),
+        csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+      },
+      success: onCommentSuccess,
+      error: function (response) {
+          // alert the error if any error occured
+          alert(response["responseJSON"]["error"]);
+      }
+    })
   })
+
+function onCommentSuccess(response) {
+  // on successfull creating object
+  // 1. clear the form.
+  console.log(response);
+  var user = JSON.parse(response["user"]);
+  // console.log(user);
+  var fields = user[0]["fields"];
+  $("#comment-form").trigger('reset');
+  // display the newly friend to table.
+  $("#comment-content").append(
+    `<div class="card">
+      <div class="card-body">
+        ${response.content||""}
+      </div>
+    </div>
+    <p class="font-weight-light">
+      ${fields["username"]||""}
+      <span class="float-right">
+      ${response.created||""}
+      </span>
+    </p>`
+    )
+}
+
 </script>
 {% endblock javascript %}

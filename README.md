@@ -233,5 +233,10 @@ instance: "[{"model": "comments.comment", "pk": 56, "fields": {"content": "Anoth
 ```
 * Added custom serialization with response_data as object, custom serialize of User and then jsonResponse
 
-### Refactor Comment JSON response to another function
+### Refactor Comments
 * Move comment jsonResponse to ajax_comment_json_response function
+* Move existing comments from issue_detail to comment_list
+* Move comment form from issue_detail to comment_form
+
+### Comment delete
+* https://stackoverflow.com/questions/17475324/django-deleteview-without-confirmation-template

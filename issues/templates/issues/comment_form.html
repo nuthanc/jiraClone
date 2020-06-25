@@ -1,0 +1,8 @@
+<form method="post" id="comment-form" style="margin-top: 1.3em;">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="content">New Comment</label>
+    {{ comment_form.content }}
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

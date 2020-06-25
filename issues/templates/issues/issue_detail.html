@@ -21,33 +21,11 @@
 >
 
 <!-- Existing comments -->
-
-<h5 class="mt-3">Comments:</h5>
-<div class="container" id="comment-content">
-  {% for comment in comments %}
-  <div class="card">
-    <div class="card-body">
-      {{ comment.content }}
-    </div>
-  </div>
-  <p class="font-weight-light">
-    {{ comment.user}}
-    <span class="float-right">
-      {{ comment.created }}
-    </span>
-  </p>
-  {% endfor %}
-</div>
+{% include "issues/comment_list.html" %}
 
 <!-- Comment Form for new comments -->
-<form method="post" id="comment-form" style="margin-top: 1.3em;">
-  {% csrf_token %}
-  <div class="form-group">
-    <label for="content">New Comment</label>
-    {{ comment_form.content }}
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+{% include "issues/comment_form.html" %}
+
 
 {% endblock %} 
 

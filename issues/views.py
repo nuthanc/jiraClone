@@ -47,6 +47,8 @@ def issue_detail(request, pk):
     # Comment posted
     if request.is_ajax and request.method == 'POST':
         return ajax_comment_json_response(request, issue)
+    elif request.is_ajax and request.method == 'DELETE':
+        return ajax_comment_delete(request, issue)
     else:
         comment_form = CommentForm()
     data = {

@@ -51,34 +51,34 @@
       success: onCommentSuccess,
       error: function (response) {
           // alert the error if any error occured
-          alert(response["responseJSON"]["error"]);
+          alert(response["error"]);
       }
     })
   })
 
-function onCommentSuccess(response) {
-  // on successfull creating object
-  // 1. clear the form.
-  console.log(response);
-  var user = JSON.parse(response["user"]);
-  // console.log(user);
-  var fields = user[0]["fields"];
-  $("#comment-form").trigger('reset');
-  // display the newly friend to table.
-  $("#comment-content").append(
-    `<div class="card">
-      <div class="card-body">
-        ${response.content||""}
+  function onCommentSuccess(response) {
+    // on successfull creating object
+    // 1. clear the form.
+    console.log(response);
+    var user = JSON.parse(response["user"]);
+    // console.log(user);
+    var fields = user[0]["fields"];
+    $("#comment-form").trigger('reset');
+    // display the newly friend to table.
+    $("#comment-content").append(
+      `<div class="card">
+        <div class="card-body">
+          ${response.content||""}
+        </div>
       </div>
-    </div>
-    <p class="font-weight-light">
-      ${fields["username"]||""}
-      <span class="float-right">
-      ${response.created||""}
-      </span>
-    </p>`
-    )
-}
+      <p class="font-weight-light">
+        ${fields["username"]||""}
+        <span class="float-right">
+        ${response.created||""}
+        </span>
+      </p>`
+      )
+  }
 
 </script>
 {% endblock javascript %}

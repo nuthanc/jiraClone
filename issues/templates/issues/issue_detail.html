@@ -32,15 +32,9 @@
 
 {% block javascript %}
 <script>
-    /*
-        On submiting the form, send the POST ajax
-        request to server and after successfull submission
-        display the object.
-    */
+
   $("#comment-form").submit(function (e) {
-    // preventing from page reload and default actions
     e.preventDefault();
-        // make POST ajax call
     $.ajax({
       type: 'POST',
       url: "{% url 'issues:detail' pk=issue.pk%}",
@@ -50,34 +44,30 @@
       },
       success: onCommentSuccess,
       error: function (response) {
-          // alert the error if any error occured
           alert(response["error"]);
       }
     })
   })
 
   function onCommentSuccess(response) {
-    // on successfull creating object
-    // 1. clear the form.
     console.log(response);
     var user = JSON.parse(response["user"]);
     // console.log(user);
     var fields = user[0]["fields"];
     $("#comment-form").trigger('reset');
-    // display the newly friend to table.
+    // Display content, username and created
     $("#comment-content").append(
-      `<div class="card">
+      `${fields["username"] || ""}
+      <span class="float-right">
+      ${response.created || ""}
+      </span>
+
+      <div class="card mb-4">
         <div class="card-body">
           ${response.content||""}
         </div>
-      </div>
-      <p class="font-weight-light">
-        ${fields["username"]||""}
-        <span class="float-right">
-        ${response.created||""}
-        </span>
-      </p>`
-      )
+      </div>`
+    )
   }
 
 </script>

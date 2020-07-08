@@ -33,7 +33,7 @@ def ajax_comment_json_response(request, issue):
         new_comment.save()
         response_data['content'] = new_comment.content
         response_data['user'] = serializers.serialize('json', [ new_comment.user, ])
-        print("Created",new_comment.created)
+        response_data['id'] = new_comment.id
         response_data['created'] = new_comment.created.strftime("%B %d, %Y, %I:%M %p")
         return JsonResponse(response_data)
     else: # Some form error

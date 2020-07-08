@@ -24,51 +24,68 @@
 {% include "issues/comment_list.html" %}
 
 <!-- Comment Form for new comments -->
-{% include "issues/comment_form.html" %}
-
-
-{% endblock %} 
-
-
-{% block javascript %}
+{% include "issues/comment_form.html" %} {% endblock %} {% block javascript %}
 <script>
-
-  $("#comment-form").submit(function (e) {
+  // MSG: Comment POST
+  $('#comment-form').submit(function (e) {
     e.preventDefault();
     $.ajax({
       type: 'POST',
       url: "{% url 'issues:detail' pk=issue.pk%}",
       data: {
         content: $('#content').val(),
-        csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
       },
       success: onCommentSuccess,
       error: function (response) {
-          alert(response["error"]);
-      }
-    })
-  })
+        alert(response['error']);
+      },
+    });
+  });
 
   function onCommentSuccess(response) {
     console.log(response);
-    var user = JSON.parse(response["user"]);
+    var user = JSON.parse(response['user']);
     // console.log(user);
-    var fields = user[0]["fields"];
-    $("#comment-form").trigger('reset');
+    var fields = user[0]['fields'];
+    $('#comment-form').trigger('reset');
     // Display content, username and created
-    $("#comment-content").append(
-      `${fields["username"] || ""}
+    $('#comment-content').append(
+      `${fields['username'] || ''}
       <span class="float-right">
-      ${response.created || ""}
+      ${response.created || ''}
       </span>
 
-      <div class="card mb-4">
+      <div class="card">
         <div class="card-body">
-          ${response.content||""}
+          ${response.content || ''}
         </div>
+      </div>
+      <div class="mt-1 mb-4">
+        <button class="btn btn-danger" id="delete-comment-${response.id}">Delete</button>
       </div>`
-    )
+    );
   }
 
+  // MSG: Comment DELETE
+  $(document).ready(function () {
+    $('#comment-content').on('click', 'button[id^=delete-comment-]',function (e) {
+      e.preventDefault();
+      const comment_id = $(this).attr('id').split('-')[2];
+      console.log(`Delete button clicked with id#${comment_id}`);
+      // $.ajax({
+      //   type: 'POST',
+      //   url: "{% url 'issues:detail' pk=issue.pk%}",
+      //   data: {
+      //     content: $('#content').val(),
+      //     csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+      //   },
+      //   success: onCommentSuccess,
+      //   error: function (response) {
+      //     alert(response["error"]);
+      //   }
+      // })
+    });
+  });
 </script>
 {% endblock javascript %}

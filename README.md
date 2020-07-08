@@ -240,3 +240,4 @@ instance: "[{"model": "comments.comment", "pk": 56, "fields": {"content": "Anoth
 
 ### Comment delete
 * https://stackoverflow.com/questions/17475324/django-deleteview-without-confirmation-template
+* Need to resolve id or class for comment-delete

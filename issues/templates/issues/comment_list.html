@@ -6,11 +6,13 @@
       {{ comment.created }}
     </span>
 
-    <div class="card mb-4">
+    <div class="card">
       <div class="card-body">
         {{ comment.content }}
       </div>
     </div>
-
+    <div class="mt-1 mb-4">
+      <button class="btn btn-danger" id="delete-comment-{{comment.id}}">Delete</button>
+    </div>
   {% endfor %}
 </div>

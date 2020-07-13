@@ -1,11 +1,12 @@
 <h5 class="mt-5">Comments:</h5>
 <div class="container" id="comment-content">
   {% for comment in comments %}
+  <div id="comment-{{comment.id}}">
     {{ comment.user}}
     <span class="float-right">
       {{ comment.created }}
     </span>
-
+    
     <div class="card">
       <div class="card-body">
         {{ comment.content }}
@@ -14,5 +15,6 @@
     <div class="mt-1 mb-4">
       <button class="btn btn-danger" id="delete-comment-{{comment.id}}">Delete</button>
     </div>
+  </div>
   {% endfor %}
 </div>

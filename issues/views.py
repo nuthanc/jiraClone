@@ -5,6 +5,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from . import models
 from comments.forms import CommentForm
+from comments.models import Comment
 from django.http import JsonResponse
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
@@ -39,16 +40,23 @@ def ajax_comment_json_response(request, issue):
     else: # Some form error
         return JsonResponse({"error": comment_form.errors}, status=400)
 
+def ajax_comment_delete(request):
+    deleteData = request.body.decode("utf-8")
+    if('=' in deleteData):
+        comment_id = deleteData.split('=')[1]
+    Comment.objects.filter(id=comment_id).delete()
+    return JsonResponse({})
+    
 @login_required
 def issue_detail(request, pk):
     template_name = 'issues/issue_detail.html'
     issue = models.Issue.objects.get(pk=pk)
     comments = issue.comments.all()
-    # Comment posted
+    # Comment posted or deleted
     if request.is_ajax and request.method == 'POST':
         return ajax_comment_json_response(request, issue)
     elif request.is_ajax and request.method == 'DELETE':
-        return ajax_comment_delete(request, issue)
+        return ajax_comment_delete(request)
     else:
         comment_form = CommentForm()
     data = {

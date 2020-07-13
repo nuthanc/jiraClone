@@ -240,4 +240,8 @@ instance: "[{"model": "comments.comment", "pk": 56, "fields": {"content": "Anoth
 
 ### Comment delete
 * https://stackoverflow.com/questions/17475324/django-deleteview-without-confirmation-template
-* Need to resolve id or class for comment-delete
+* Need to add id to comments just like
+https://github.com/realpython/django-form-fun/blob/master/part4/talk_project/static/scripts/main.js#L83
+* Had to give id's to comment delete button as well as comment list main div to extract the id and hide the id
+* Also, in views.py had to decode the request body as there is no data in request.DELETE or request.POST
+* Had to get getCookie function from Django docs for AJAX requests

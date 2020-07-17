@@ -51,18 +51,20 @@
     $('#comment-form').trigger('reset');
     // Display content, username and created
     $('#comment-content').append(
-      `${fields['username'] || ''}
-      <span class="float-right">
-      ${response.created || ''}
-      </span>
+      `<div id="comment-${response.id}">
+        ${fields['username'] || ''}
+        <span class="float-right">
+        ${response.created || ''}
+        </span>
 
-      <div class="card">
-        <div class="card-body">
-          ${response.content || ''}
+        <div class="card">
+          <div class="card-body">
+            ${response.content || ''}
+          </div>
         </div>
-      </div>
-      <div class="mt-1 mb-4">
-        <button class="btn btn-danger" id="delete-comment-${response.id}">Delete</button>
+        <div class="mt-1 mb-4">
+          <button class="btn btn-danger" id="delete-comment-${response.id}">Delete</button>
+        </div>
       </div>`
     );
   }

@@ -116,6 +116,9 @@ pip install django-allauth
 * django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist
 * Changing the siteid worked
 
+### Social Network Login Failure
+* Go to localhost admin and Remvoe and Add localhost
+
 ### Override all-auth login
 * Add account login.html in project templates
 * Add static directory and css styling for login

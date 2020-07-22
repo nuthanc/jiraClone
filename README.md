@@ -245,3 +245,7 @@ https://github.com/realpython/django-form-fun/blob/master/part4/talk_project/sta
 * Had to give id's to comment delete button as well as comment list main div to extract the id and hide the id
 * Also, in views.py had to decode the request body as there is no data in request.DELETE or request.POST
 * Had to get getCookie function from Django docs for AJAX requests
+
+### Comments delete authorized
+* https://stackoverflow.com/questions/43807625/django-ajax-return-error-messages
+* Don't hide for invalid

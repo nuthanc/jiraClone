@@ -25,6 +25,7 @@
 
 <!-- Comment Form for new comments -->
 {% include "issues/comment_form.html" %} {% endblock %} {% block javascript %}
+
 <script>
   // MSG: Comment POST
   $('#comment-form').submit(function (e) {
@@ -91,7 +92,8 @@
           console.log("post deletion successful");
         },
         error: function (response) {
-          alert(response["error"]);
+          // console.log(response);
+          alert(response.statusText); // the message
         }
       })
     });

@@ -44,8 +44,14 @@ def ajax_comment_delete(request):
     deleteData = request.body.decode("utf-8")
     if('=' in deleteData):
         comment_id = deleteData.split('=')[1]
-    Comment.objects.filter(id=comment_id).delete()
-    return JsonResponse({})
+    comment = Comment.objects.get(id=comment_id)
+    if request.user.username == comment.user.username:
+        comment.delete()
+        return JsonResponse({})
+    else:
+        response = JsonResponse({"error": "Unauthorized"})
+        response.status_code = 401
+        return response
     
 @login_required
 def issue_detail(request, pk):

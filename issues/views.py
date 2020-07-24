@@ -52,6 +52,9 @@ def ajax_comment_delete(request):
         response = JsonResponse({"error": "Unauthorized"})
         response.status_code = 401
         return response
+
+def ajax_comment_edit(request):
+    pass
     
 @login_required
 def issue_detail(request, pk):
@@ -63,6 +66,8 @@ def issue_detail(request, pk):
         return ajax_comment_json_response(request, issue)
     elif request.is_ajax and request.method == 'DELETE':
         return ajax_comment_delete(request)
+    elif request.is_ajax and request.method == 'PUT':
+        return ajax_comment_edit(request)
     else:
         comment_form = CommentForm()
     data = {

@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
 <h1>
   {{issue.title}}
   <span class="{{className}}">
@@ -24,95 +26,18 @@
 {% include "issues/comment_list.html" %}
 
 <!-- Comment Form for new comments -->
-{% include "issues/comment_form.html" %} {% endblock %} {% block javascript %}
+{% include "issues/comment_form.html" %} {% endblock %} 
 
-<script>
-  // MSG: Comment POST
-  $('#comment-form').submit(function (e) {
-    e.preventDefault();
-    $.ajax({
-      type: 'POST',
-      url: "{% url 'issues:detail' pk=issue.pk%}",
-      data: {
-        content: $('#content').val(),
-        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
-      },
-      success: onCommentSuccess,
-      error: function (response) {
-        alert(response['error']);
-      },
-    });
-  });
+{% block javascript %}
 
-  function onCommentSuccess(response) {
-    console.log(response);
-    var user = JSON.parse(response['user']);
-    // console.log(user);
-    var fields = user[0]['fields'];
-    $('#comment-form').trigger('reset');
-    // Display content, username and created
-    $('#comment-content').append(
-      `<div id="comment-${response.id}">
-        ${fields['username'] || ''}
-        <span class="float-right">
-        ${response.created || ''}
-        </span>
-
-        <div class="card">
-          <div class="card-body">
-            ${response.content || ''}
-          </div>
-        </div>
-        <div class="mt-1 mb-4">
-          <button class="btn btn-danger" id="delete-comment-${response.id}">Delete</button>
-        </div>
-      </div>`
-    );
-  }
-
-  // MSG: Comment DELETE
-  $(document).ready(function () {
-    $('#comment-content').on('click', 'button[id^=delete-comment-]',function (e) {
-      e.preventDefault();
-      const comment_id = $(this).attr('id').split('-')[2];
-      console.log(`Delete button clicked with id#${comment_id}`);
-      $.ajax({
-        type: 'DELETE',
-        url: "{% url 'issues:detail' pk=issue.pk%}",
-        beforeSend: function (xhr) {
-          xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
-        },
-        data: {
-          comment_pk: comment_id
-        },
-        success: function (json) {
-          // hide the post
-          console.log("Inside delete success");
-          $('#comment-' + comment_id).hide(); // hide the post on success
-          console.log("post deletion successful");
-        },
-        error: function (response) {
-          // console.log(response);
-          alert(response.statusText); // the message
-        }
-      })
-    });
-  });
-
-  function getCookie(name) {
-      var cookieValue = null;
-      if (document.cookie && document.cookie != '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-          var cookie = jQuery.trim(cookies[i]);
-          // Does this cookie string begin with the name we want?
-          if (cookie.substring(0, name.length + 1) == (name + '=')) {
-            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-            break;
-          }
-        }
-      }
-      return cookieValue;
-    }
+<script type="text/javascript">
+  const comment_url = "{% url 'issues:detail' pk=issue.pk%}"
 </script>
+
+<!-- MSG: Comment POST -->
+<script type="text/javascript" src="{% static 'js/commentPost.js' %}"></script>
+
+<!-- MSG: Comment delete -->
+<script type="text/javascript" src="{% static 'js/commentDelete.js' %}"></script>
+
 {% endblock javascript %}

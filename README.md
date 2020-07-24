@@ -252,3 +252,6 @@ https://github.com/realpython/django-form-fun/blob/master/part4/talk_project/sta
 ### Comments delete authorized
 * https://stackoverflow.com/questions/43807625/django-ajax-return-error-messages
 * Don't hide for invalid
+
+### Refactor js in issue_detail to js folders
+* 

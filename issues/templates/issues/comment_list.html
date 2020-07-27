@@ -12,9 +12,11 @@
         {{ comment.content }}
       </div>
     </div>
-    <div class="mt-1 mb-4">
-      <button class="btn btn-danger" id="delete-comment-{{comment.id}}">Delete</button>
-    </div>
+    {% if user.is_authenticated and comment.user.username == user.username %}
+      <div class="mt-1 mb-4">
+        <button class="btn btn-danger" id="delete-comment-{{comment.id}}">Delete</button>
+      </div>
+    {% endif %}
   </div>
   {% endfor %}
 </div>

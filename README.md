@@ -254,4 +254,12 @@ https://github.com/realpython/django-form-fun/blob/master/part4/talk_project/sta
 * Don't hide for invalid
 
 ### Refactor js in issue_detail to js folders
-* 
+* Done
+
+### Show Delete only to Created User
+* Changes in comment_list.html
+* The user is always attached to the request, in your templates you can do the following:
+```jinja
+{% if user.is_authenticated %}
+{% endif %}
+```

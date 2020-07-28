@@ -16,7 +16,10 @@
       <div class="mt-1 mb-4">
         <button class="btn btn-danger" id="delete-comment-{{comment.id}}">Delete</button>
       </div>
+    {% else %}
+      <div class="mt-1 mb-4"></div>
     {% endif %}
+
   </div>
   {% endfor %}
 </div>

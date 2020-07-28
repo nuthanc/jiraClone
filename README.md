@@ -263,3 +263,4 @@ https://github.com/realpython/django-form-fun/blob/master/part4/talk_project/sta
 {% if user.is_authenticated %}
 {% endif %}
 ```
+* Add proper spacing in comment_list.html after Delete button

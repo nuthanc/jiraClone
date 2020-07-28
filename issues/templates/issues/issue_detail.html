@@ -1,43 +1,42 @@
-{% extends 'base.html' %} 
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <h1>
-  {{issue.title}}
-  <span class="{{className}}">
-    #{{issue.issue_no}}
-  </span>
+    {{issue.title}}
+    <span class="{{className}}">
+        #{{issue.issue_no}}
+    </span>
 </h1>
 <p class="font-weight-normal">{{issue.details|linebreaks}}</p>
 <p class="font-weight-light">{{ issue.created_at }}</p>
 <a
-  class="btn btn-primary"
-  role="button"
-  href="{% url 'issues:edit' pk=issue.pk %}"
-  >Edit</a
+    class="btn btn-primary"
+    role="button"
+    href="{% url 'issues:edit' pk=issue.pk %}"
+    >Edit</a
 >
 <a
-  class="btn btn-danger"
-  role="button"
-  href="{% url 'issues:delete' pk=issue.pk %}"
-  >Delete</a
+    class="btn btn-danger"
+    role="button"
+    href="{% url 'issues:delete' pk=issue.pk %}"
+    >Delete</a
 >
 
 <!-- Existing comments -->
 {% include "issues/comment_list.html" %}
 
 <!-- Comment Form for new comments -->
-{% include "issues/comment_form.html" %} {% endblock %} 
-
-{% block javascript %}
+{% include "issues/comment_form.html" %} {% endblock %} {% block javascript %}
 
 <script type="text/javascript">
-  const comment_url = "{% url 'issues:detail' pk=issue.pk%}"
+    const comment_url = "{% url 'issues:detail' pk=issue.pk%}";
 </script>
 
 <!-- MSG: Comment POST -->
 <script type="text/javascript" src="{% static 'js/commentPost.js' %}"></script>
 
 <!-- MSG: Comment delete -->
-<script type="text/javascript" src="{% static 'js/commentDelete.js' %}"></script>
+<script
+    type="text/javascript"
+    src="{% static 'js/commentDelete.js' %}"
+></script>
 
 {% endblock javascript %}

@@ -264,3 +264,10 @@ https://github.com/realpython/django-form-fun/blob/master/part4/talk_project/sta
 {% endif %}
 ```
 * Add proper spacing in comment_list.html after Delete button
+
+### Comment Edit
+* New file of commentEdit.js
+* Changes in 
+  * commentPost.js
+  * comment_list.html
+  * views.py of issues
